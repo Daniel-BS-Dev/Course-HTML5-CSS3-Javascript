@@ -1,0 +1,91 @@
+<!DOCTYPE html><!--type of file-->
+<html lang="pt-br">
+    <head>
+        <title>
+            curso completo de HTML - CFB Cursos
+        </title>
+    </head>
+    <body>
+       <a href="#fim" id="top">Fim!</a>
+       <!--
+           it is not link, display inline
+        -->
+       <a href="http://www.youtube.com/cfbcursos">Canal CFB Cursos!</a>
+       <a href="tagH.html">aula3!</a>
+       <!--
+           class1/tagH.html
+           ../tagH.html => go back
+       -->
+       <a href="http://www.youtube.com/cfbcursos" target="_top">CFP-cursos!</a>
+       <!--
+        TARGET
+           _blank    => it opens in a new window
+           _parent   => it opens in same window
+           _self     =>
+           _top      =>
+           framename =>
+       -->
+       <a href="http://www.youtube.com/cfbcursos" 
+          target="_blank" 
+          rel="external" 
+          media="all" 
+          hreflang="pt" 
+          type="text/html"
+       >
+          CFP-cursos!
+       </a>
+       <!--
+           DOM Interface:
+               target;
+               download;
+               rel;
+               type;
+               text;
+       -->
+
+       <!--
+           REL => {
+                 alternar = fornece um link para uma representação alternativa do documento
+                    (por exemplo, imprimir pagina, traduzida ou espelhada)
+                 author   = Fornece um link para o autor do documento
+                 bookmark = url permanente usado para bookmarkint
+                 external = Indica que o documento referenciado não faz parte do mesmo site que o documento atual
+                 help     = Fornece um link para um documento de ajuda
+                 licence  = Fornece um link para informações de direitos autorais do documento
+                 next     = Fornece um link para o proximo documento da serie
+                 nofollow = Links para um documento não endossado, como um link pago
+                     ("nofollow" é usado pelo GooGle para especificar que o robo de pesquisa do Google não deve seguir esse link)
+                noreferrer= Requer que o naveagdor não envie um cabeçalho de referência HTTP se o usuário seguir o hyperlink
+                noopener  = Requer que qualquer contexto de navegação criado seguindo o hiperlinnk não deva ter um contexto de navegação de abertura
+                prev      = O documento anterior em uma seleção
+                search    = Links de pesquisa para uma ferramenta de pesquisa para o documento
+                tag       = uma tag (keyword) para o documento atual
+               }
+       -->
+
+       <!--
+          MEDIA => {
+              all        = (padrão) Adequado para todos od dispositivos
+              aural      = Sintetizadores de fala auditiva
+              braille    = Dispositivo de Braille
+              handheld   = Dispositivo de tela pequena a banda limitada
+              projection = Projetors
+              print      = Impressoras
+              screen     = Telas de computadores
+              tv         = Televisores
+          }
+           
+          hreflang => {
+              tipo de lingaugem
+          }
+
+          type => {
+              tipo do arquivo
+          }
+       -->
+       <a href="logo.rar" download>Download da image</a>
+       <a href="mailto:danielbenedito263@gmail.com">Enviar email!</a>
+       <a href="javascript:alert('CBF Cursos');">Canal!</a>
+       <a href="#top" id="fim">top</a>
+    </body>
+</html>
