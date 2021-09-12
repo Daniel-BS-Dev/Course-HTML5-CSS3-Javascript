@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abrirDialog(){
+            document.getElementById("d1").setAttribute("open","");
+        }
+        function fecharDialog(){
+            document.getElementById("d1").removeAttribute("open");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="abrirDialog()">Abrir</button>
+    <button onclick="fecharDialog()">Fechar</button>
+    <dialog id="d1" open>
+        <p><dfn title="é uma linguagem de marcação">HTML5</dfn>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Culpa quasi soluta rem nesciunt sed, quibusdam nulla debitis,
+        dolores asperiores vel, dolor impedit porro facere vero at voluptates officia delectus temporibus!
+        </p>
+        <p><abbr title="é uma linguagem de estilo">CSS3</abbr>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Culpa quasi soluta rem nesciunt sed, quibusdam nulla debitis,
+            dolores asperiores vel, dolor impedit porro facere vero at voluptates officia delectus temporibus!
+            <!--
+                dialog => ele fica em oculto sem o "open"
+            -->
+        </p>
+    </dialog>
+</body>
+</html>
