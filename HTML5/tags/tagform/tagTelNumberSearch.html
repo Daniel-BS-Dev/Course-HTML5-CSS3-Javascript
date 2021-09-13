@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        tel    => pattern and placeholder
+        number => {
+            step = indicar os numeros que eu vou pular
+            max  = maximo
+            min  = minimo
+        }
+        search => 
+    -->
+    <form name="f_cadastro" action="#" method="GET">
+        <label>Telefone:</label>
+        <input type="tel" name="f_tel" pattern="\([0-9]{2}\)[9]{1}[0-9]{4}-[0-9]{4}" placeholder="(xx)xxxxx-xxxx">
+        <label>Number:</label>
+        <input type="number" name="number" step="2" min="0" max="10">
+        <label>Pesquisa:</label>
+        <input type="search" name="f_pesquisa">
+        
+    </form>
+</body>
+</html>

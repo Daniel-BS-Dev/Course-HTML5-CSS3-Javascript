@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    file => {
+        multiple (boolean)        => permite a seleção de mais de um arquivo
+        accept = ".doc,.docx,"
+        accept = "application/msword"
+        accept = "image/*,.pdf"
+        accept = ".jpg,.gif.png"
+        accept = "image/jpg,image/gif,image/png"
+    }
+    url
+    placeholder = "https://cfbcursos.com.br"
+    pattern     = "https://.*"
+    pattern
+    placeholder
+-->
+<body>
+    <form name="f_cadastro" action="#" method="GET" enctype="multipart/form-data">
+        <label>Selecione o arquivo:</label>
+        <input type="file" name="f_arquivo" accept = ".jpg,.gif.png" multiple>
+        <label>Digite o URL:</label>
+        <input type="url" name="f_url" >  
+    </form>
+</body>
+</html>

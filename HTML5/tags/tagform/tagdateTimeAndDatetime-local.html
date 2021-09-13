@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f_cadastro" action="#" method="GET">
+        <label>Hora:</label>
+        <!--
+            min      => numero minimo
+            max      => numero maximo
+            required => campo obrigatorio
+        -->
+        <input type="time" name="f_hora" min="09:00" max="17:00" required>
+        <label>Data:</label>
+        <input type="date" name="f_date" min="2021-10-01" max="2021-10-30" required>
+        <label>Data e Hora:</label>
+        <input type="datetime-local" name="f_date_hora" min="2021-10-01" max="2021-10-30" required>
+        <input type="submit" name="f_enviar" value="enviar"> 
+
+    </form>
+</body>
+</html>
