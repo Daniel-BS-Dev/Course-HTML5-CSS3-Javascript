@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag output</title>
+</head>
+<body>
+    <!--a tag output é para fazer a saida dos elementos input -->
+    <form oninput="res.value=parseInt(a.value)+parseInt(b.value)">
+        0<input type="range" id="a" value="50">100
+        <p>+</p>
+        <input type="number" id="b" value="0">
+        <p>=</p>
+        <output name="res" for="a b"></output>
+        <!--
+            name     => name do meu output
+            for      => elemento que ele vai ter relação
+            oninput  => quando hover uma entrada de dados no formulario, vai pegar o meu res.value 
+            parseInt => transformar minha string em number
+        -->
+    </form>
+</body>
+</html>
