@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radial-gradient</title>
+    <style>
+        .d1{
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+            background: radial-gradient(circle,#F00, #FF0);
+            /*
+            colocando o lugar de cada cor, onde ela começa e acaba
+            radial-gradient(#F00 0%, #00F 25%, #FF0 50%); -> Variação radial do centro para fora com três cores em 
+            posições definidas, vermelho no início, azul em 25% e amarelo iniciando no meio
+  
+            se o meu gardient segui o formato do container em eu forço ele formar um ciculo usando o circle
+            radial-gradient(circle, #F00, #FF0);  Variação radial circular, independente do formato retangular,
+            a variação do gradiente não será oval e sim circular, do centro para fora com duas cores, vermelho e amarelo.
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="d1"> 
+        <p>
+            O gradiente radial possui uma variação circular/radial do centro para fora, para configurar este gradiente 
+            informamos simplesmente as cores. 
+        </p>
+      </div>
+      <div class="d2"> 
+          <p>
+            O gradiente radial possui uma variação circular/radial do centro para fora, para configurar este gradiente 
+            informamos simplesmente as cores.
+          </p>
+        </div>
+</body>
+</html>

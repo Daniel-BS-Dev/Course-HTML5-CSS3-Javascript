@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeating-linear-gradient and repeat-radial-gradient</title>
+</head>
+<style>
+    .d1{
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+            background: repeating-linear-gradient(90deg, #F00 0%, #FF0 20%);
+            /* repeating -> faz o gradient repetir*/
+    }
+    .d2{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            background: repeating-radial-gradient(circle,#F00 0%, #FF0 20%);
+            /* repeating -> faz o gradient repetir*/
+    }
+</style>
+<body>
+    <div class="d1"> 
+        <p>
+            Estes gradientes são uma variação dos gradientes linear e radial, eles funcionam repetindo o gradiente configurado 
+            até preencher
+        </p>
+      </div>
+      <div class="d2"> 
+        <p>
+            Estes gradientes são uma variação dos gradientes linear e radial, eles funcionam repetindo o gradiente configurado 
+            até preencher
+        </p>
+      </div>
+      
+</body>
+</html>

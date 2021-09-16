@@ -1,4 +1,7 @@
 p{
-    background-color:  rgb(205, 48, 20); 
+    background-color:  rgb(205, 48, 20); /* maximo valor 255
+                                              rgba(10,20,40, 1) a vai de 0 a 1
+       
+    */
     color:#FF00FF;
 }

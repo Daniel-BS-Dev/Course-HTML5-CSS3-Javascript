@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear-Gradient</title>
+    <style>
+        .d1{
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+            background: linear-gradient(to bottom, #f00, #ff0)
+            /* 
+            Variação linear na vertical de cima para baixo com duas cores, vermelho e amarelo.
+
+            to      -> indica a direção
+            direção -> top, bottom, right and left
+
+            linear-gradient(to bottom, #F00 0%, #00F 25%, #FF0 50%); Variação linear na vertical de cima para baixo com três
+            cores em posições definidas, vermelho no início, azul em 25% e amarelo em 50%
+            */
+        }
+        .d2{
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+            background: linear-gradient(30deg, #F00, #00F, #FF0)
+            /* 
+            Variação linear na diagonal em 45 graus com três cores, vermelho, azul e amarelo
+            
+            valores -> 30, 45, 60, 90, 180, 360
+
+            informando onde as cores vão começar e acabar
+            linear-gradient(180deg, #F00 0%, #00F 25%, #FF0 50%); Variação linear na vertical de cima para baixo com três
+            cores em posições definidas, vermelho no início, azul em 25% e amarelo em 50%
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="d1"> 
+      <p>
+          O gradiente linear possui uma variação linear de um ponto inicial A até um ponto final B, para configurar este 
+          gradiente basta informar o sentido da variação linear e as cores.
+
+          Alguns browseres tem uma sintaxe específica para uso do gradiente, configra a seguir
+          Safari 5.1 até 6.0  -> -webkit-linear-gradient(#F00, #FF0);
+          Opera 11.1 até 12.0 -> -o-linear-gradient((#F00, #FF0);
+          Firefox 3.6 até 15  -> -moz-linear-gradient((#F00, #FF0);
+          Sintaxe padrão      -> linear-gradient((#F00, #FF0);
+      </p>
+    </div>
+    <div class="d2"> 
+        <p>
+            O gradiente linear possui uma variação linear de um ponto inicial A até um ponto final B, para configurar este 
+            gradiente basta informar o sentido da variação linear e as cores.
+        </p>
+      </div>
+</body>
+</html>
