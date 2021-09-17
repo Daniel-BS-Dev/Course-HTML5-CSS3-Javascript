@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatção de texto</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            white-space: normal;      /*controla a quebra de linha no container, nowrap não quebra a linha, normal é o valor padrão*/
+            word-break:normal;        /*controla a quebra das palavras,valor padrão normal ou keep-all, break-all quebra onde é preciso,*/
+            overflow: auto;           /*controla o conteúdo que esta fora do container,visible valor padrão, hidden não mostra, 
+                                        scroll adiciona as barras rolagem x e y, auto adiciona as barras apenas se necessario
+                                     */
+           
+        }
+        .p1{
+            text-align: center;        /*formata a  posição do texto*/
+            text-decoration: none;     /*usado para tira os sublinhados como os do link*/
+            text-transform: lowercase; /* Converte em minúsculo*/
+            text-indent: 100px;        /*distancia do paragrafo*/
+            word-spacing: 50px;        /*espaçamento entre as palavras*/
+            letter-spacing: 10px;      /*espaçamento das letras, 0px é o padrão*/
+            line-height: 2;            /*espaçamento das linhas, 1 é o valor padrão*/
+            direction: rtl;            /* direção do texto, da direita para esquerda, ltr é o valor padrão*/
+            color: #000;             /*formata a cor do texto*/
+            text-align-last: justify;     /*controla a posição da ultuma linha, valor padrão left*/
+        }
+        .p2{
+            text-align: justify;        /*formata a  posição do texto*/
+            text-decoration: underline; /*sublinhado em baixo*/
+            text-transform: uppercase;  /*tudo em maisculo*/
+        }
+        .p3{
+           text-align: end;             /*formata a posição do texto*/
+           text-decoration: overline;   /*sublinhado em cima*/
+           text-transform: capitalize;  /*Converte as primeiras letras em maiúsculo*/
+        }
+        .p4{
+           text-align: start;             /*formata a posição do texto*/
+           text-decoration: line-through; /*riscado*/
+           text-transform: unset;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam tempora dolores,
+        ipsam corporis sapiente in beatae veritatis perspiciatis nobis qui esse voluptas odio rerum ad,
+        inventore fuga officia quos!
+    </div>
+    <p class="p1">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam tempora dolores,
+       ipsam corporis sapiente in beatae veritatis perspiciatis nobis qui esse voluptas odio rerum ad,
+       inventore fuga officia quos!
+    </p>
+    <p class="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam tempora dolores,
+        ipsam corporis sapiente in beatae veritatis perspiciatis nobis qui esse voluptas odio rerum ad,
+        inventore fuga officia quos!
+     </p>
+     <p class="p3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam tempora dolores,
+        ipsam corporis sapiente in beatae veritatis perspiciatis nobis qui esse voluptas odio rerum ad,
+        inventore fuga officia quos!
+     </p>
+     <p class="p4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam tempora dolores,
+        ipsam corporis sapiente in beatae veritatis perspiciatis nobis qui esse voluptas odio rerum ad,
+        inventore fuga officia quos!
+     </p>
+</body>
+</html>
