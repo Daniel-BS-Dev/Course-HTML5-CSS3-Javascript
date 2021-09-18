@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juntando os valores</title>
+    <style>
+        div{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #000;
+            transform-origin: 100% 0%; /* ele faz a tranformção mas não sair so ponto especificado*/
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Com esta propriedade podemos especificar o ponto de origem ou de fixação para as transformações
+
+        1 ponto, do lado esquerdo de cima    = transform-origin(0%, 0%);
+        2 ponto, no meio do lado de cima     = transform-origin(50%, 0%);
+        3 ponto, do lado direito de cima     = transform-origin(100%, 0%);
+        4 ponto, no meio do lado esquerdo    = transform-origin(0%, 50%);
+        5 ponto, no meio do meio             = transform-origin(50%, 50%);
+        6 ponto, no meio do lado direito     = transform-origin(100%, 50%);
+        7 ponto, no lado esquedo de baixo    = transform-origin(0%, 100%);
+        8 ponto, no meio do lado de baixo    = transform-origin(50%, 100%);
+        9 ponto, na direita de baixo         = transform-origin(100%, 100%)
+    </div>
+</body>
+</html>
