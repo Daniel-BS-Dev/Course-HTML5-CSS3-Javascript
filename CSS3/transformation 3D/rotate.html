@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate 3D</title>
+    <style>
+        div{
+            width: 500px;
+            height: 250px;
+            border: 1px solid #000;
+            transform: rotateY(75deg);    /* vai gira no ponto Y */
+            transform: translateY(200px);  /* vai se deslocar */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        As propriedades são as mesmas que vimos anteriormente em 2D onde trabalhamos com os eixos X e Y, a diferença é 
+        que também podemos usar o eixo Y, por isso especificamos como 3D. Veja a seguir as funções 3D que podemos utilizar.
+
+        transform: translate3d(x,y,z);
+        transform: translateX(x);
+        transform: translateY(y);
+        transform: translateZ(z);
+        transform: scale3d(x,y,z);
+        transform: scaleX(x);
+        transform: scaleY(y);
+        transform: scaleZ(z);
+        transform: rotate3d(x,y,z,ângulo);
+        transform: rotateX(x);
+        transform: rotateY(y);
+        transform: rotateZ(z);
+        perspective(n)
+    </div>
+</body>
+</html>
