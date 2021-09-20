@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table, td, th{
+            border: 1px solid rgb(15, 15, 15);
+            
+         }
+        table{
+            width: 500px;
+            table-layout: fixed;         /* distribui igualmente a largura para todas as colunas da tabela*/
+            border-collapse: collapse;  /* juntar as celulas da tabela, o padrão é separate*/
+            empty-cells: hide;         /* controle de celulas vazias. show mostrar, hide esconder*/
+        }
+        td,th{
+            height: 50px;
+            vertical-align: middle; /* alinhamento top, middle e bottom*/
+            text-align: center;
+            border-collapse: separate; /* juntar as celulas da tabela, o padrão é separate*/
+            border-spacing: 2px 2px;  /* espaçamento das bordas tenho que colocar a distancia x, y. Mas só vai funcionar com o separate*/
+        }
+
+        th{
+            background-color: #8a8;
+            color: #fff;
+            font-size: 25px;
+        }
+       
+        /* tr:nth-child(even)   -> seleciona os pares..., */
+        /* tr:nth-child(odd)    -> seleciona os impares..., */
+        /* tr:nth-child(n+2)    -> pega todos os elemento, ele comça a preencher do 2..., */
+        /* tr:nth-child(2n+1)   -> seletor de 2 em 2 começando pelo 1..., primeiro numero quantidade, segundo onde começa */
+        /* tr:nth-of-type(n+2) -> pega exatamente o elemento que estou selecionando..., */
+        tr:nth-child(2n+3){
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Peça</th>
+            <th>Valor</th>
+            <th>Estoque</th>
+        </tr>
+        <tr>
+            <td>Processador</td>
+            <td>800.00</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Memoria RAM</td>
+            <td>150.00</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td>HD</td>
+            <td>320.00</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Cx Som</td>
+            <td>50.00</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>teclado</td>
+            <td>30.00</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Mouse</td>
+            <td>20.00</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
