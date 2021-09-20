@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Table, Table-row and Table-cells</title>
+    <style>
+        ol,ul,li{
+            border: 1px solid #000;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ol{
+            display: table;/*  elemento se comporta como se fosse uma célula de uma tabela, 
+            podendo receber todas as propriedades que usamos para <td>. */
+            width: 500px;
+            table-layout: fixed;
+        }
+
+        ul{
+            display: table-row; /* linha */
+        }
+
+        li{
+            display: table-cell; /* celula */
+            text-align: center;
+        }
+
+        .titulo{
+            background-color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        inline-table 
+        Elemento é exibido como uma tabela, não iniciam em uma nova linha nem quebram de linha após o elemento, outro 
+        detalhe é que eles não ocupam a linha inteira, somente ocupam o espaço de seu conteúdo, podendo inclusive usar as 
+        propriedades de formatação do elemento "table".
+        
+        list-item 
+        Elemento se comporta como um "li" inclusive passar a mostrar o marcador.
+        
+        run-in 
+        Exibe um elemento como block ou inline, dependendo do contexto onde está inserido.
+        
+        table 
+        O element se comporta exatamente igual a uma tabela, podendo inclusive usar as propriedades de formatação do 
+        elemento "table".
+        
+        table-caption 
+        O elemento se comporta como se fosse um caption de uma tabela "th".
+        
+        table-header-group 
+        O elemento se comporta como se fosse um "thead" da tabela.
+        
+        table-footer-group 
+        O elemento se comporta como se fosse um "tfoot" da tabela.
+        
+        table-row-group 
+        O elemento se comporta como se fosse um "tbody" da tabela.
+        
+        table-cell 
+        O elemento se comporta como se fosse uma célula de uma tabela, podendo receber todas as propriedades que 
+        usamos para "td".
+        
+        table-column 
+        Elemento se comporta como o elemento "col".
+        
+        table-row 
+        O elemento se comporta como se fosse uma linha de uma tabela, podendo receber todas as propriedades que 
+        usamos para "tr".
+            </div>
+    <ol>
+        <ul class="titulo">
+            <li>Cor</li>
+            <li>Forma</li>
+            <li>Objeto</li>
+        </ul>
+        <ul>
+            <li>Verde</li>
+            <li>Quadrado</li>
+            <li>Caneta</li>
+        </ul>
+        <ul>
+            <li>Vermelho</li>
+            <li>Circulo</li>
+            <li>Microfone</li>
+        </ul>
+    </ol>
+</body>
+</html>

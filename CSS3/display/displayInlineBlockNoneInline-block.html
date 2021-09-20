@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display None, Inline, Block and Inline-block</title>
+    <style>
+        div,span{
+            border: 1px solid #000;
+            margin: 10px;
+        }
+        .d1{
+            visibility:  hidden;   /*  oculta o elemento */
+            display: none;        /*  o elemento deixa de existe na pagina.
+            Este valor para propriedade display pode ser usada para ocultar o elemento pelo javascript. */
+            display: inline;      /*  Os elementos configurados com display:seguem o tamanho do elemento, não quebram de linha após o 
+            elemento, outro detalhe é que eles não ocupa a linha inteira, somente ocupam o espaço de seu conteúdo.
+            Podemos citar alguns exemplos como: <span>, <a>, <img>. */
+            display: block;       /*  Um elemento que tem o display confirgurado em block, sempre inicia em uma nova linha,
+            não aceita elementos na mesma linha que ele, ou seja, quebra a linha após o elemento, e sua área acupa toda a 
+            linha onde ele é inserido.Podemos citar como exemplo alguns elementos que tem display:
+            block configurados por padrão: <div>, <h1> até <h6>, <p>, <form>, <header>, <footer>, <section>, <table>  */
+            display: inline-block;/*  não quebra a linha, segui o tamanho especificado pelo programador*/
+        }
+    </style>
+</head>
+<body>
+    <div  class="d1">div</div>
+    <span class="s1">span</span>
+    <div  class="d2">div</div>
+    <span class="s2">span</span>
+</body>
+</html>

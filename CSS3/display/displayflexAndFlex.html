@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display flex and flex</title>
+    <style>
+        section{
+            border: 1px solid rgb(218, 21, 21);
+            display: flex;       /* é usado para elementos pai, deixa o container flexivel */
+            min-width: 500px;    /* vai deminuir ate 500px */
+            /* quebra de linha */
+            flex-wrap: wrap;    /* quando eu diminuo a tela os elementos filhos passam pra outra linha. nowrop ele permanecem na mesma linha */
+            -webkit-flex-wrap: wrap;  /* para browser antigos */
+            -moz-flex-wrap: wrap;     /* para browser antigos */
+            /* Alinhamento horizontal */
+            justify-content: flex-start;/* alinha na direita, flex-end alinha na esquerda, center alinha no center. Alinhamento horizontal */
+            -webkit-justify-content: wrap;  /* para browser antigos */
+            -moz-justify-content: wrap;     /* para browser antigos */
+             /* Alinhamento vertical */
+             align-items: center;
+             /* controlar a direção */
+             flex-direction: row ;/* padrão row em linha, column columa. Se eu quiser inverte essa eu uso o row-reverse ou o column-reverse*/ 
+        }
+
+        div{
+            border: 1px solid #000;
+            flex: 1;                    /* é usado para elementos filho, deixa os filho também flexivel, 
+            vai pegar todo o espaço do container, dividindo igualmente, deixa o layout responsivo*/
+            /* como o elemento filho vai se comportar em relação ou elemento pai*/
+            flex-grow:1 ;  /* flex-grow é a mesma coisa do flex:1, 1 expande, 0 contrai*/
+            flex-shrink:0 ; /* indica se o elemento vai contrai ou espande, 1 retrai, 0 não retrai*/
+            
+        }
+
+        #d1{
+           order: 1;
+           flex-basis: 1;  /* se houver espaço vazio, o meu #d1 vai consumir */
+        }
+
+        #d2{
+           order: 2; 
+           flex-basis: 100%; /* se houver espaço ou não, ele vai ocupar 100% da div, eu que determino a medida*/
+        }
+
+        #d3{
+            order: 4; 
+        }
+
+        #d4{
+            order: 5; 
+        }
+
+        #d5{
+            order: 6; 
+        }
+
+        #d6{
+            order: 3; 
+        }
+    </style>
+</head>
+<body>
+    <section id="s1">
+        <div id="d1">CFB1</div>
+        <div id="d2">CFB2</div>
+        <div id="d3">CFB3</div>
+        <div id="d4">CFB4</div>
+        <div id="d5">CFB5</div>
+        <div id="d6">CFB6</div>
+        
+    </section>
+</body>
+</html>
