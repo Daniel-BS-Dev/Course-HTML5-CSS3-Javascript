@@ -7,12 +7,14 @@
     <title>Trasition part one</title>
     <style>
         p{
+            margin: auto;
+            margin-top: 100px;
             width: 300px;
             border: 1px solid #000;
             border-radius: 10px;
             padding: 10px;
             text-align: justify;
-            transition: width 2s, height 2s, background-color 2s,  color 2s ;
+            transition: width 2s, height 2s, background-color 2s,  color 2s, transform 2s;
             /* trasition não é usado no desparador e sim no elemento que está sendo desparado
                usado para fazer uma trazação mais zuave, só declara a propriedade que quero:
                largura               =>  transition: width 2s;
@@ -20,12 +22,23 @@
                todas os elementos    =>  transition: width 2s, height 2s, background-color 2s,  color 2s ;
             */
             transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+            /*
+            Podemos inserir o valor de transition-timing-function usando a metapropriedade transtion, por exemplo, 
+            transition:height 2s linear 2s, background-color 2s linear 2s;
+
+            */
+            transition-delay: 1s;
+            /*
+            Permite configurar um tempo de atraso para início da animação, ou seja, com este delay configurado a animação 
+            não começa de imediato, 0s é o padrão
+            */
         }
         p:hover{
             width: 500px;
             background-color: #f00;
             color: #fff;
             padding: 10px;
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -50,6 +63,11 @@
         ease-out                      = Termiona devagar.
         ease-in-out                   = Inicia e termina devagar.
         cubic-bezier(1nx,1ny,2nx,2ny) = Permite definirmos a velocidade em pontos diferentes.
+
+        transition-delay 
+
+        Permite configurar um tempo de atraso para início da animação, ou seja, com este delay configurado a animação 
+        não começa de imediato.
     </p>
 </body>
 </html>
