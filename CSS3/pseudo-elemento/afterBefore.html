@@ -24,10 +24,12 @@
         .p3::before{
             content: 'cfb - ';
             color: darkblue;
+            counter-reset: section;
             /* colocando um texto */
         }
         .p4::before{
-            content: counter(li);
+           
+            content: "Section" counter(section) ".";
         }
         .p2{
             display: flex;
@@ -35,6 +37,7 @@
             
         }
         p{
+            
             padding: 10px 10px;
             border: 1px solid #000; 
             font-size: 25px;

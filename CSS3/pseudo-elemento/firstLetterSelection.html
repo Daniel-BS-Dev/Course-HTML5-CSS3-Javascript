@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-letter, first-line and selection</title>
+    <style>
+        p{
+            font-size: 25px;
+        }
+        p::first-letter{
+            font-size: 40px;
+            color: #f00;
+            /* formatação para a primeira linha*/
+        }
+        .p3::first-line{
+          background-color: darkred;
+          padding: 45px;
+          color: darkturquoise;
+          /* formatação pra primeira linha*/
+        }
+        ::selection{
+            color: #f00;
+            background-color: black;
+            /* formata o texto selecionado, tipo quando eu estou selecionando pra colar*/
+        }
+    </style>
+</head>
+<body>
+    <p>Canal Fessor Bruno</p>
+    <p>Canal Fessor Bruno</p>
+    <p class="p3">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Expedita quae officia sapiente, veniam vitae sint, voluptates 
+       asperiores esse minus accusamus eaque eius tempora, illum ipsum
+       nostrum molestiae neque dicta! Minima.
+    </p>
+</body>
+</html>
