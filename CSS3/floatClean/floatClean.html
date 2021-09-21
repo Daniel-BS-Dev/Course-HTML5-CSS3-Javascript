@@ -10,7 +10,10 @@
             border: 1px solid #f00;
         }
         .img1{
-            float: left; /* o texto vai flutua a */
+            float: left; /* o texto vai flutua a esquerda */
+        }
+        .fix{
+            clear: both; /* tira o comportamento do left */
         }
     </style>
 </head>
@@ -45,7 +48,7 @@
         libero! Itaque pariatur reprehenderit nemo modi, magni soluta dicta. 
         Quo enim praesentium, totam molestias iure repellendus a perferendis.
         Quae, esse explicabo!
-    </p>
+    </p class="fix">
     <img class="img2" src="../../images/image.jpg" width="200" height="100">
 </body>
 </html>
