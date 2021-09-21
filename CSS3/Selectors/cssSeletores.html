@@ -68,6 +68,12 @@
      :target              #noticias:target      Seleciona o elemento #noticias atual (clicou em um URL que contém esse nome de âncora)
      :valid               input:valid           Seleciona todos os elementos input com um valor válido
      :visited             a:visited             Seleciona todos os links visitados
+
+      tr:nth-child(even)   -> seleciona os pares..., */
+      tr:nth-child(odd)    -> seleciona os impares..., */
+      tr:nth-child(n+2)    -> pega todos os elemento, ele comça a preencher do 2..., */
+      tr:nth-child(2n+1)   -> seletor de 2 em 2 começando pelo 1..., primeiro numero quantidade, segundo onde começa */
+      tr:nth-of-type(n+2) -> pega exatamente o elemento que estou selecionando..., */
     -->
 </body>
 </html>
