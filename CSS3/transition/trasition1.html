@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasition part one</title>
+    <style>
+        p{
+            width: 300px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: justify;
+            transition: width 2s, height 2s, background-color 2s,  color 2s ;
+            /* trasition não é usado no desparador e sim no elemento que está sendo desparado
+               usado para fazer uma trazação mais zuave, só declara a propriedade que quero:
+               largura               =>  transition: width 2s;
+               largura e altura      =>  transition: width 2s, height 2s;
+               todas os elementos    =>  transition: width 2s, height 2s, background-color 2s,  color 2s ;
+            */
+            transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        p:hover{
+            width: 500px;
+            background-color: #f00;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        transition
+
+        Podemos implementar efeitos de trancição em nossos elementos usando a propriedade transition, basicamente 
+        precisamos informar a propriedade que receberá a transição, width, height, color, visibility, etc e o tempo de 
+        duração da transição
+
+        transition-timing-function
+
+        Com esta propriedade podemos configurar a curva de velocidade da transição, se será mais acelerada no início, no 
+        fim ou no meio, se a velocidade será linear ou podemos até especificar os momentos em que será mais rápida ou 
+        devagar.
+        Os valores possíveis são:
+
+        ease                          = (padrão) Configura a velocidade para começar devagar, acelar até a metade do efeito e desacelerar no final.
+        linear                        = Sem alteração de velocidade do início ao fim com a mesma velocidade.
+        ease-in                       = Inicia devagar.
+        ease-out                      = Termiona devagar.
+        ease-in-out                   = Inicia e termina devagar.
+        cubic-bezier(1nx,1ny,2nx,2ny) = Permite definirmos a velocidade em pontos diferentes.
+    </p>
+</body>
+</html>
