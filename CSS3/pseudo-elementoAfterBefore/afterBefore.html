@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-elemento after and before</title>
+    <style>
+        .p1::before, .p1::after{
+            content: ''; /* aqui eu coloco o que vem antes do meu elemento p, e toda a formatação dele , seja, imagem, frase....*/
+            background-color: brown;
+            width: 200px;
+            height: 4px;
+            display: block;
+            
+            /* formatação de uma linha acima e abaixo do primeiro p*/
+        }
+        .p2:hover::before{
+            display: flex;
+            align-items: center;
+            content: url("../../images/seta.png");
+            /* a imagem só vai aparecer quando o mouse estiver sobre ela */
+        }
+        .p3::before{
+            content: 'cfb - ';
+            color: darkblue;
+            /* colocando um texto */
+        }
+        .p4::before{
+            content: counter(li);
+        }
+        .p2{
+            display: flex;
+            align-items: center;
+            
+        }
+        p{
+            padding: 10px 10px;
+            border: 1px solid #000; 
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">Canal Fessor Bruno - Curso de Css</p>
+    <p class="p2">Canal Fessor Bruno - Curso de Css</p>
+    <p class="p3">Canal Fessor Bruno - Curso de Css</p>
+    <p class="p4">Canal Fessor Bruno - Curso de Css</p>
+</body>
+</html>
