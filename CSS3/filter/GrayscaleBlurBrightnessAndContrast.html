@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grayscale, Blur, Brightness and Contrast</title>
+    <style>
+        img{
+            filter: grayscale(100%);    /* Filtro que configura o elemento em escala de cinza, com valor 100% fica totalmente sem cor, tudo cinza de 0 a 100% ou 0 a 1 */
+            filter: blur(2px);          /* Embaçamento, quanto maior o valor maior será o embaçamento, valor em px */
+            filter: brightness(150%);   /* Intensidade do brilho, 100% é o valor padrão, de 0% a n%, ou 0 a n */
+            filter: contrast(200%);     /* Ajusta o contraste do elemento, 100% é o valor padrão. de 0% a n%, ou 0 a n */
+        }
+    </style>
+</head>
+<body>
+    <img src="../../images/image.jpg">
+</body>
+</html>
