@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation2</title>
+    <style>
+        @keyframes anima {
+            0%{left: 500px;top: 500px;}
+            14%{left: 0px;top: 0px;}
+            28%{background-color: #fff;left: 0px;top: 0px;}
+            42%{background-color: #f00;left: 0px;top: 0px;}
+            57%{background-color: #f00;left: 0px;top: 0px;}
+            71%{background-color: #fff;left: 0px;top: 0px;}
+            85%{left: 0px;top: 0px;}
+            100%{left: 500px;top: 500px;}
+        }
+        p{
+            position: relative;
+            left: 500px;
+            top: 500px;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #000;
+            animation-name: anima;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-delay: 0s;
+            animation-iteration-count: 5;
+            animation-play-state: running;
+            animation-direction: alternate;
+            
+     /* metapropriedade -> animation: name duration timing-function delay iteration-count direction fill-mode;*/
+            
+        }
+    </style>
+</head>
+<body>
+    <p>
+    animation-direction 
+        Direção da animaçao, no código de exemplo vamos reverter a direção.
+        Os valores possíveis são:
+        reverse = Reverte a direção
+        alternate = Alterna a direção
+
+    animation-timing-function 
+        Configura a curva de velocidade da animação, os valores são:
+        ease                  = (padrão) Configura a velocidade para começar devagar, acelar até a metade do efeito e desacelerar no final.
+        linear                = Sem alteração de velocidade do início ao fim com a mesma velocidade.
+        ease-in               = Inicia devagar.
+        ease-out              = Termiona devagar.
+        ease-in-out           – Inicia e termina devagar.
+        cubic-bezier(n,n,n,n) – Permite definirmos a velocidade em pontos diferentes.
+
+    animation-iteration-count 
+        Configura quantas vezes a animação irá se repetir.
+        animation-iteration-count:3;       -> Animação é executada três vezes
+        animation-iteration-count:infinite -> Animação é reproduzida continuamente, sem parar.
+
+    Metapropriedade transition 
+        Podemos juntar todos os parâmetros somente na propriedade transition, veja o exemplo
+        animation: nomeAnimação 8s linear 4s infinite reverse;
+
+    animation-play-state 
+        Configura o estado da animação, se está rodando ou está em pausa, os valores são:
+        paused  -> Pausa a animação.
+        running -> Reproduz a animação.
+    </p>
+</body>
+</html>
