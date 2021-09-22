@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        /* animação de posicionamento */
+        @keyframes anima1 {             /* para usar animação coloco o keyframes e o nome  */
+            from{ left: 0px; }         /* ele vai sair da posição 0px  */
+            to{ left: 500px; }         /* vai mover 500px pra esquerda   */
+            
+        }
+        @keyframes anima2 {
+            from{left: 0px; top: 0px;} /* vai se deslocar na diagonal             */
+            to{left: 500px;top: 500px;} /* posso declara quantas propriedades quiser */
+            
+        }
+        /* animação de cores*/
+        @keyframes anima3 {
+            from{background-color: #fff;top: 0px; left: 0px;}
+            to{background-color: #f00;top: 0px; left: 0px;}
+        }
+        /*
+        animação de posição
+        p{
+            position: relative; /* esse position é para que meu keyframes descoloque, sempre que trabalho como left e right, tenho que colocar o position 
+            left: 500px;        /* eu coloco esse left se caso queira que ele não volte para a possição 0px assim ele fica na posição de 500px ao final da animação
+            width: 260px;
+            height: 260px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: justify;
+            animation-name: anima2;             /* passando minha animação pro codigo 
+            animation-duration: 3s;            /* controlar o tempo da animação  
+            animation-timing-function: linear; /* Configura a curva de velocidade da animação os mesmo valores do transition 
+           
+        }
+        */
+        /* animação de cores 
+        p{
+            width: 260px;
+            height: 260px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: justify;
+            animation-name: anima3;
+            animation-timing-function: linear;
+            animation-duration: 3s;
+        }
+        */
+        /* posicão e cores juntas*/
+        p{
+            position: relative;
+            left: 500px;
+            top: 500px;
+            width: 260px;
+            height: 260px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: justify;
+            animation-name: anima2, anima3;
+            animation-timing-function: linear;
+            animation-duration: 3s;
+            animation-delay: 0s,2s;     /* só comeca a animação depois de 2s se eu colocar so uma valor.
+             se eu colocar 2 ou mais valores vai valeu pra minha animações o zero pro posicionamento e o 2 pra cor */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Diferente do transition. O animation não precisa e uma evento pra acontecer,
+        assim que, a tela inicia, ação começa
+
+        O primeiro passo é definir o nome e os keyframes da animação, definimos estes parâmetros da seguinte forma:
+        @keyframes nomeDaAnimação{
+          /* keyframes */
+       }
+       Depois basta usar a animação com a propriedade animation-name
+    </p>
+</body>
+</html>
