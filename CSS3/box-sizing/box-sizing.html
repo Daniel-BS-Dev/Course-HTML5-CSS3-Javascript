@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-sizing</title>
+    <style>
+        .div1{
+            width: 400px;
+            height: 200px;
+            background-color: #888;
+            padding: 0px;
+            margin-bottom: 2px;
+        }
+        .div2{
+            width: 400px;
+            height: 200px;
+            border: 10px solid #000;
+            padding: 30px;
+            text-align: justify;
+            box-sizing: border-box; /* a div vai ser mostrada do tamanho real, não conta padding e border */
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">Canal Fessor Bruno</div>
+    <div class="div2">
+        A propriedade box-sizing é muito interessante, ela permite incluir ao tamanho total de um elemento o padding e a 
+        borda.
+        Isso resolver muitos problemas, na hora de adicionar um padding por exemplo o tamanho original do elemento não 
+        é alterado.
+
+        Os valores possíveis são:
+         content-box -> (Padrão) Os tamanho do elemento é calculado junto com o padding e o border.
+         border-box  -> O tamanho do elemento é calculado pelo width e height, sem somar os valores de padding e border
+    </div>
+</body>
+</html>
