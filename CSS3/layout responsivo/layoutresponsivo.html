@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo</title>
+    <style>
+        img{
+            width:100%px;
+            height:250px;
+        }
+        p{
+            width: 100%;
+        }
+        @media screen and (min-width:0px) and (max-width:400px) {
+            /* é tela? o tamanho maximo é 400px, se atender a esse especificações ele me retorna true,
+               posso esquecer do espaço entre @media screen and (max-width:800px)  */
+            body{
+                background-color: brown;
+            }
+        }
+        @media screen and (min-width:401px) and (max-width:600px) {
+            body{
+                background-color: green;
+            }
+        }
+        @media screen and (min-width:601px) and (max-width:800px) {
+            body{
+                background-color: blue;
+            }
+        }
+        @media screen and (min-width:801px) and (max-width:1500px) {
+            body{
+                background-color: rgb(157, 255, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="../../images/image.jpg" >
+    <p>As regras media queries podem verificas várias características dos dispositivos como, largura e altura da janela, 
+        largura e altura do dispositivo, orientação (se o dispositivo está na horizontal/paisagem ou vertical/retrato), 
+        resolução.
+        O resultado de um comando @media é do tipo boolean (true/false), verdadeiro ou falso, se o tipo de dispositivo 
+        corresponde ao tipo de mídia terá um retorno true/verdadeiro e as regras CSS estabelecidas para esta @media serão 
+        aplicadas.
+        Os valores que podemos usar para os tipos de mídia são.
+        all    -> Todos os tipos de dispositivos
+        print  -> Usado para impressoras
+        screen -> Uado para telas, computador, celulares, tablets, etc.
+        speech -> Usado para telas de leitores de contúdo, leitores de ebook por exemplo, em voz alta.
+    
+     <!--
+         Também podemos definir diferentes folhas de estilo para diferentes mídias
+
+        <link rel="stylesheet" media="print()" href="impressora.css">
+        <link rel="stylesheet" media="screen and (max-width: 500px)" href="celular.css">
+        <link rel="stylesheet" media="screen and (min-width: 500px)" href="pc.css">
+        <link rel="stylesheet" media="screen and (min-width: 1024px)" href="telasGrandes.css">
+    -->
+    Value                                       Description
+aspect-ratio            -> A proporção entre a largura e a altura da janela de visualização
+color                   -> O número de bits por componente de cor para o dispositivo de saída
+color-index             -> Quantidade de cores que o dispositivo pode exibir
+device-aspect-ratio     -> A proporção entre a largura ea altura que o dispositivo pode exibir
+device-height           -> Medida da altura do dispositivo, por exemplo a tela do computador
+device-width            -> Medida da largura do dispositivo, por exemplo a tela do computador
+grid                    -> Se o dispositivo é um grid ou bitmap
+height                  -> Altura da janela
+max-aspect-ratio        -> A proporção máxima entre largura e altura da área da tela
+max-color               -> O número de bits máximo por componente de cor para o dispositivo de saída
+max-color-index         -> Quantidade máxima de cores que o dispositivo pode exibir
+max-device-aspect-ratio -> A proporção máxima entre a largura ea altura que o dispositivo pode exibir
+max-device-height       -> Medida máxima da altura do dispositivo, por exemplo a tela do computador
+max-device-width        -> Medida máxima da largura do dispositivo, por exemplo a tela do computador
+max-height              -> Altura máxima da janela
+max-monochrome          -> O número de bits máximo por componente de cor para o dispositivo de saída monocromático
+max-resolution          -> Resolução máxima do dispositivo, em dpi ou dpcm
+max-width               -> Largura máxima da janela
+min-aspect-ratio        -> A proporção mínima entre largura e altura da área da tela
+min-color               -> O número de bits mínimo por componente de cor para o dispositivo de saída
+min-color-index         -> Quantidade mínima de cores que o dispositivo pode exibir
+min-device-aspect-ratio -> A proporção mínima entre a largura ea altura que o dispositivo pode exibir
+min-device-width        -> Medida mínima da largura do dispositivo, por exemplo a tela do computador
+min-device-height       -> Medida mínima da altura do dispositivo, por exemplo a tela do computador
+min-height              -> Altura mínima da janela
+min-monochrome          -> O número de bits mínimo por componente de cor para o dispositivo de saída monocromático
+min-resolution          -> Resolução mínima do dispositivo, em dpi ou dpcm
+min-width               -> Largura mínima da janela
+monochrome              -> O número de bits por componente de cor para o dispositivo de saída em dispositivo monocromático
+orientation             -> Orientação do dispositivo, retrato ou paisagem
+overflow-block          -> Conteúdo transborda para fora do bloco principal
+overflow-inline         -> Quando o conteúdo que transborda a janela ao longo da linha
+resolution              -> Resolução do dispositivo, em dpi ou dpcm
+scan                    -> Processo de escanemanto/varredura da tela
+update-frequency        -> Quão rápido o dispositivo pode atualizar o conteúdo mostrado, frquência de atualização da tela
+width                   -> Largura da janela
+
+    </p>
+</body>
+</html>
