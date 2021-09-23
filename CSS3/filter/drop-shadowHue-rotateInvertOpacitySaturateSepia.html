@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Drop-Shadow, Hue-Rotate, Invert, Opacity,saturate and Sepia</title>
+    <style>
+       img{
+           filter: drop-shadow(10px 10px 5px rgb(33, 33, 114)); /* Adicione sombra projetada. drop-shadow(distânciaX distânciaY tamanho Embaçamento cor); */
+           filter: hue-rotate(300deg);                            /* muda a matiz. em deg */
+           filter: invert(100%);                                  /* inverte as cores. valor em % */                     
+           filter: opacity(10%);                                  /* Opacidade, controle a transparência, quanto menor o valor, mais transparente. vai de 0 a 1 ou de 0% a 100%*/
+           filter: saturate(2000%);                               /* Saturação o padrão é 100%, intensidade das cores. */
+           filter: sepia(100%);                                   /* Efeito de coloração, pode ficar semelhante a envelhecimento */
+        }
+    </style>
+</head>
+<body>
+    <img src="../../images/image.jpg" width="500" height="250">
+</body>
+</html>
