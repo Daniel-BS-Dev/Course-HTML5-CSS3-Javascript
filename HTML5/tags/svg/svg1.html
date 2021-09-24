@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG 1</title>
+</head>
+<body>
+    <!-- 
+        svg largura e altura da area disponivel
+            width  -> largura da area
+            height -> altura da area
+        tamanho da minha imagem
+            rect         -> forma
+            width        -> largura da imagem dentro do svg
+            height       -> altura da imagem  dentro do svg
+            x            -> Posicionamento horizontal, eixo X.
+            y            -> Posicionamento horizontal, eixo X.
+            style        -> estilo
+            fill:#F00;   -> O parâmetro fill é usado nos elementos de<svg>para indicar a cor de preenchimento, neste caso a cor vermelho.
+            stroke-width -> largura do contorno
+            stroke:rgb() -> cor do contorno
+            rx, ry       -> arredondamento das bordas
+            opacity      -> transparencia
+    -->
+    <svg width="600" height="600">
+       <rect width="200" height="200" x="0" y="0" rx="20" ry="20" style="fill: rgb(255, 0, 0);stroke-width:1;stroke:rgb(0, 0, 0)"/>
+       <rect width="200" height="200" x="200" y="0" style="fill:#0f0;stroke-width:1;stroke: #000;opacity:0.5"/>
+       <rect width="200" height="200" x="400" y="0" rx="20" ry="20" style="fill:#00f;stroke-width:1;stroke: #000;"/>
+       <rect width="200" height="200" x="0" y="200" style="fill:#000;stroke-width:1;stroke: #000;opacity:0.5"/>
+       <rect width="200" height="200" x="200" y="200" rx="20" ry="20" style="fill:rgb(209, 212, 16);stroke-width:1;stroke: #000;"/>
+       <rect width="200" height="200" x="400" y="200" style="fill:rgb(190, 7, 108);stroke-width:1;stroke: #000;opacity:0.5"/>
+    </svg>
+</body>
+</html>
