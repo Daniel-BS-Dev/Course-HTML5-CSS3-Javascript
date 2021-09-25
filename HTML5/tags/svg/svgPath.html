@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Path</title>
+</head>
+<body>
+    <!--
+      path           -> tipo em curva
+      d              -> elemento para cria minhas cordenadas
+      M              -> indica de onde meu ponto vai comecar
+      c              -> indica a curva
+      L              -> indica uma linha
+      primeiro ponto
+      M0,0           -> ponto inicial
+      c300,0 600,300 -> ponto da curva
+      600, 600       -> ponto final
+      segundo ponto
+      600,600              -> ponto inicial
+      c-150,-150 -450,-150 -> ponto da curva
+      -600,0               -> ponto final
+      terceiro ponto
+      L0,-600              -> ponto inicial x e y
+
+    
+    -->
+    <svg width="1200" height="1200" >
+        <path style="stroke:#000;stroke-width:1;fill: none;" d="M0,0 c300,0 600,300 600,600 
+                                                                  c-150,-150 -450,-150 -600,0
+                                                                  L0,-600
+        " 
+        />
+        <path style="stroke: #000;stroke-width: 2;fill:none" d="M600,600 1200,1200" />
+    </svg>
+    
+</body>
+</html>
