@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Text</title>
+</head>
+<body>
+    <!--
+        text -> tipo texto
+        x    -> posição horizontal
+        y    -> posição vertical
+        tspan-> especifica um texto multi linha, o texto recebe as mesmas formataçoes do seu pai
+    -->
+    <svg width="600" heigth="700">
+        <text x="50" y="50" fill="red" style="font-size: 40;font-weight:900;font-family:sans-serif;text-shadow:20px 20px 5px #000">
+            Canal Fessor Bruno
+            <tspan x="50" y="100">segundo texto</tspan>
+        </text> 
+        <text x="50" y="150" fill="green">CFB
+            <tspan x="50" y="130">terceiro texto</tspan>
+        </text>
+    
+    </svg>
+</body>
+</html>
