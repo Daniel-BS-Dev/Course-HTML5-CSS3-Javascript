@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Fill Radial Gradient</title>
+</head>
+<body>
+    <!--
+        radialGradient -> tipo do gradiente
+        id             -> id do gradiente
+        cx, cy         -> posição do gradiente externo
+        r              -> é o raio
+        fx, fy         -> circulo interno
+    -->
+    <svg width="600" height="600">
+        <radialGradient id="g1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%" >
+           <stop offset="0%" style="stop-color: #ff0;" />
+           <stop offset="50%" style="stop-color: #00f;"/>
+           <stop offset="100%" style="stop-color: #f00;"/>
+        </radialGradient>
+        <rect width="200" height="200" fill="url(#g1)" />
+    </svg>
+</body>
+</html>
