@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Rect and transform</title>
+</head>
+<body>
+    <!--
+        transform rotate    -> vai rotacionar o componente em grau, se eu usar no html não usar o deg, no css usar o deg
+        45                  -> valor em grau da rotação
+        200                 -> ponto de origem da rotação no echo x
+        150                 -> ponto de origem da rotação no echo y
+
+        transform translate -> vai mover o componente no echo x e no echo y
+        50                  -> valor para movimentar no echo x
+        0                   -> valor para movimentar no echo y
+
+        transfrom scale     -> controla o tamanho do componente, valor padrão 1, se eu colocar 2 ele 
+                               terá tamanho duplicado, 3 triplicado...,se eu colocar 0.5 terá tamanho pela metade do contanier 
+        1                   -> valor padrão, se eu quiser colocar um valor para x e y. "scale (1 0.5)" onde 1 é o valor de x, e 0.5 é o valor de y
+    
+        transform  skew     -> controla a inclinação
+        skewX               -> inclinação para horizontal
+        skewY               -> inclinação para vertical
+        skew                -> inclinação para ambos os lados,só funciona no css transform="skew(10deg, 10deg), para usar os 2 no html transform="skewX(10)  skewY(10)"
+        10                  -> valor da inclinação -10 inclina para o sentido oposto
+    -->
+    <svg width="400" height="400" style="background-color: cadetblue;border:1px solid #000;border-radius:10px;">
+        <rect x="100" y="100" width="200" height="200" 
+        style="fill: brown;stroke:#000;stroke-width:1;"
+        transform="skewX(10) scale(1) translate(0 0) rotate(0 200 150)"
+        />
+    </svg>
+</body>
+</html>
