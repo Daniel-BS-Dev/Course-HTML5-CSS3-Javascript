@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var</title>
+</head>
+<body>
+    <p>
+        Declarar variáveis em javascript é bem simples, diferente de linguagens tradicionais como C++, em javascript não 
+        informamos o tipo de dados e por isso não precisamos de operações como typecast, basta usar a palavra reservada 
+        “var” e o nome da variável
+    </p>
+    <script>
+        var name= "danie";          // nome é o nome da minha variável
+        var chanel, number=43, site=17;  // declaração de variável mutipla
+        chanel=null               // minha variavel recebeu valor null
+        document.write(chanel);  // imprimindo valor da minha variável
+        document.write("<br>"); // quebra de linha
+        document.write(site);
+        document.write("<br>"); // quebra de linha
+        document.write(chanel +" "+ number +" "+ name); // concatenação das variaveis
+        document.write("<br>"); // quebra de linha
+        document.write(chanel +" "+ (number+site) +" "+ name); // vai fazer a soma depois concatenação
+</script>
+</body>
+</html>
