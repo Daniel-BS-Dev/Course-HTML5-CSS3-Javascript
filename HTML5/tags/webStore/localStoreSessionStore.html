@@ -8,11 +8,30 @@
 </head>
 <body>
     <!--
-        localStore -> armazena elementos de forma permanente
-        session    -> armazena
+    store
+        localStore   -> armazena informações de forma permanente
+        sessionStore -> armazena na seção as informações são perdidas ao desligar o browser
+     metodos
+        setItem()   -> adicionar.Para adicionar eu preciso informar chave e valor: "nome=chave" e "Bruno=valor"
+        getItem()   -> leitura ou pegar o valor. Para isso eu preciso passa a chave, tenho que armazenar em uma variavel
+        removeItem()-> remover. Para remover eu pego a chave 
+        clear()     -> limpar todos
+    
     -->
     <script>
-        localStorage.setItem()
+        localStorage.setItem("Nome","Bruno");
+        var vnome = localStorage.getItem("Nome");
+        alert(vnome);
+
+        localStorage.setItem("canal","CFB");
+        localStorage.removeItem("canal");
+
+        localStorage.setItem("Nome1","Bruno1");
+        localStorage.setItem("Nome1","Bruno2");
+        localStorage.setItem("Nome3","Bruno3");
+        localStorage.setItem("Nome4","Bruno4");
+
+        localStorage.clear();
     </script>
 </body>
 </html>
