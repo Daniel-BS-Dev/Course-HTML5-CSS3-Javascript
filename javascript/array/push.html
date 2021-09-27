@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor push</title>
+    <script>
+        var color1 = new Array("Green", "Blue", "Yellow"); // outra forma de array
+        var color2 = ["Red", "white", "black"];
+        // add end
+        color1.push("silver");
+        // add beginning
+        color2.unshift("darkGreen");
+        // add by position
+        color1[0] = "pink";
+        color1[4] = "darkpink";
+        
+        //Catch items add backpack
+        var items    = ["knife", "rope", "flashlight", "key"];
+        var backpack = new Array ();
+
+        backpack.push(items[0]);
+
+
+        document.write(color1+"<br>");
+        document.write(backpack);
+
+    </script>
+</head>
+<body>
+    <!--
+    Método                       Descrição                                                                    Exemplo
+concat()     Junta os elementos de dois ou mais arrays e retorna uma cópia com os elementos juntos        var ar1 = ["Carro", "Moto"];
+                                                                                                          var ar2 = ["Navio", "Patins", "Skate"];
+                                                                                                          var transp = ar1.concat(ar2);
+indexOf()   Procura por um elemento específico no array e retorna a sua posição                           var cores = ["Verde", "Azul", "Amarelo"];
+                                                                                                          var pos = cores.indexOf("Azul");
+                                                                                                          //Retorna 1
+join()     Junta todos os elementos de um array em uma string var cores = ["Verde", "Azul", "Amarelo"];   var paleta = cores.join();
+push()     Insere um novo elemento no final do array                                                      var cores = ["Verde", "Azul", "Amarelo"];
+                                                                                                          cores.push(“Vermelho”);
+pop()      Remove o último elemento do array var cores = ["Verde", "Azul", "Amarelo"];                    cores.pop();
+reverse()  Inverte a ordem dos elementos do array                                                         cores.reverse();
+shift()    Remove o primeiro elemento do array var cores = ["Verde", "Azul", "Amarelo"];                  cores.shift();
+sort()     Ordena os elementos do array em ordem crescente                                                cores.sort();
+toString() Converte um array em string e retorna essa string var cores = ["Verde", "Azul", "Amarelo"];    cores.toString();
+unshift()  Insere um novo elemento no início do array var cores = ["Verde", "Azul", "Amarelo"];           cores.unshift(“Vermelho”);
+splice()   Corta o array em um ponto indicado. var num = [0,1,2,3,4,5,6,7,8,9];                           num.splice(2,4);
+                                                                                                          Remove 4 elementos a partir do índice 2
+                                                                                                          Resultado: [0,1,2,3,6,7,8,9]
+-->
+</body>
+</html>
