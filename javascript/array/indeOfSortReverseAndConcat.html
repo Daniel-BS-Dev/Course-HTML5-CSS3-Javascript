@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf, Sort, Reverse and Concat</title>
+    <script>
+        var backpack = ["rope", "rock", "knife", "arm"];
+        var number   = [1, 4, 5, 8, 6, 2, 9, 3, 7, 0];
+        var author   = [];
+
+
+        document.write(backpack + "<br>");
+        document.write(backpack.indexOf("knife"));
+        document.write("<br>");
+        number.sort();    // ordena na order crescente
+        number.reverse(); // reverte a ordem
+        document.write(number + "<br>");
+        document.write("<br>");
+
+        author = backpack.concat(number);
+
+
+        document.write(author + "<br>");
+        document.write(number.length + "<br>");
+        document.write(author.length + "<br>");
+
+    </script>
+</head>
+<body>
+length     rerona o total de elementos dentro do array
+reverse()  Inverte a ordem dos elementos do array                                                  cores.reverse();
+sort()     Ordena os elementos do array em ordem crescente                                         cores.sort();
+concat()     Junta os elementos de dois ou mais arrays e retorna uma cópia com os elementos juntos var ar1 = ["Carro", "Moto"];
+                                                                                                   var ar2 = ["Navio", "Patins", "Skate"];
+                                                                                                   var transp = ar1.concat(ar2);
+indexOf()   Procura por um elemento específico no array e retorna a sua posição                    var cores = ["Verde", "Azul", "Amarelo"];
+                                                                                                   var pos = cores.indexOf("Azul");
+                                                                                                   //Retorna 1
+    
+</body>
+</html>
