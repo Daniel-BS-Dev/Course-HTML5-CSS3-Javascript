@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner HTML</title>
+</head>
+<body>
+    <p id="text">
+       Suponhamos que em algum momento seja preciso mudar o texto definido por esse parágrafo, como fazer isso? 
+       Usando a propriedade “innerHTML”
+    </p>
+    <input type="text" id="boxText" value="CFB">
+    <script>
+        var bxtxt = document.getElementById("boxText");
+        bxtxt.value = "mudei o value da input"; // peguei o valor do meu input e mudei para Daniel
+        var txt = document.getElementById("text");
+        txt.innerHTML="mudei o conteudo da tag p";
+        
+ </script>
+</body>
+</html>
