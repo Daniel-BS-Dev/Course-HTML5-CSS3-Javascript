@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <script>
+    
+        // adicionando de uma a 10
+        var count=0;
+        for(count; count <= 10; count ++){
+            document.write(count);
+        }
+        var number = [];
+        var phrase = [];
+
+        number.push(5);
+        number.push(1);
+        number.push(2);
+        number.push(3);
+        number.push(4);
+
+        // mostrando os numeros
+        for(count=0; count < number.length; count++){
+            document.write(number[count]+"<br>");
+        }
+
+        // adicionando pelo prompt
+        for(var write = 0; write < 2; write++){
+            phrase.push(prompt("Enter number",""));
+           
+        }
+        // mostrando
+        for(var write = 0; write < phrase.length; write++){
+            document.write(phrase[write] + "<br>");
+           
+        }
+       //matrix
+       var backpack = [["rope", 1],["knife", 10],["flashlight",5], ["life",1]];
+
+       // imprimendo
+       for(var line=0; line < 4; line++){ // contorla o numero de linha
+           for(var column=0; column < 2; column++){ // controla o numero de colunas
+               document.write(backpack[line][column]+ " ");
+           }
+           document.write("<br>");
+       }
+    </script>
+</body>
+</html>
