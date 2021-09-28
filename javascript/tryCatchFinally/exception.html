@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try, catch and finally</title>
+    <script>
+        try{
+          document.write("CFB cursos" + "<br>" );
+        }catch(e){
+           document.write("error: " + e.message + "<br>" ); // mostra o erro no documento
+           console.log("error message: " + e.message);      // mosta no console
+        }
+        // gerando um erro 
+        var number;
+        try{
+          number = prompt("Enter value ");
+          if((number > 10 || number < 0)){
+              throw new Error("invalid value. Value must be from 0 to 10"+"<br>");
+              
+          }
+          document.write("value: "+ number);
+        }catch(e){
+          document.write("error: "+ e.message);
+        }finally{ 
+            document.write(number);
+            // o bloco finally vai excutar com exeção ou não
+        }
+    </script>
+</head>
+<body>
+    a instrução try “monitora” a execução dos comandos do bloco, caso haja algum erro, este erro é passado à instrução catch que 
+    executa seu bloco de comandos, caso não ocorra nenhum erro o bloco catch é ignorado, ao final são executados os 
+    comandos do bloco finally.
+    
+</body>
+</html>
