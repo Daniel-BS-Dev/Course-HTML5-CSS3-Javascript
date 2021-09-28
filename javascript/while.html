@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body>
+    <script>
+        /*
+        p1         ->  inicial
+        while(p2){ -> codição
+         p3        -> incremento ou decremento
+        }
+        */
+       var number = 0;
+       var count= 10;
+       var sun;
+       while(number <= count){
+           sun = number * count;
+           document.write(number + " X " + count + " = " + sun + "<br>")
+           number ++;
+       }
+       while(count --){
+           document.write(count+"<br>");
+       }
+    </script>
+</body>
+</html>
