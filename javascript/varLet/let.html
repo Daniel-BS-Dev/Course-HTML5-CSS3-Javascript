@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Let</title>
+    <script>
+        let number = 10;                // pertece a todo escopo
+        document.write(number + "<br>");
+
+        if(number == 10){
+            let number = 5               // pertence apenas ao escopo do if
+            document.write(number + "<br>");
+        }
+        document.write(number+"<br>");
+    </script>
+</head>
+<body>
+    a variavel var pode ser acessada de qualquer lugar mesmo no descopo de uma função
+    com o let ela faz parte no escopo que foi declarada
+</body>
+</html>
