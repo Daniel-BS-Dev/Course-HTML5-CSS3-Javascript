@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <script>
+        var mp=Math.PI; 
+        var me=Math.E;
+        document.write(mp+"<br>");
+        document.write(me+"<br>");
+
+        // method
+        var v1 = -10;
+        var ma = Math.abs(v1); // valor absoluto de -10 é 10
+        document.write(ma+"<br>"); 
+
+        // arredondamento
+        var v2 = 10.4;
+        var mc =Math.ceil(v2); // arredonda pra cima = 11
+        document.write(mc+"<br>");
+
+        var mf = Math.floor(v2); // arredonda pra baixo = 10
+        document.write(mf+"<br>");
+
+        var mr = Math.round(v2);
+        document.write(mr+"<br>");// se for menor que 5  arredonda pra baixo, maior ou igual a 5 arredonda pra cima
+   
+       //eleva um numero
+       var v3 = 4;
+       var mp = Math.pow(v3,2); // 4 elevado a 2 = 16. posso usar var ao invés de 2
+       document.write(mp+"<br>");
+   
+       //retorna a raiz quadrada
+       var v4 = 25;
+       var mr = Math.sqrt(v4); // raiz quadrada de 25 é 5
+       document.write(mr+"<br>");
+
+       //valor aleatorio
+       var mt = Math.random(); // retorna uma valor entre 0 e 1
+       document.write(mt+"<br>");
+
+       //valor entre 0 e 10
+       var v5 = 90;
+       var mm = Math.random()*v5; // vai me retornar uma valor entre 0 e 10
+       var abs = Math.round(mm); // arredonda o valor
+       document.write(abs+"<br>");
+
+       // seno e coseno
+       var angle = 45;
+       var c = Math.cos(angle * Math.PI/180); // coseno
+       var s = Math.sin(angle * Math.PI/180); // seno
+       document.write(c+"<br>");
+       document.write(s+"<br>");
+
+       // retornando valor maximo e valor minimo
+       var max = Math.max(1,65,4,100,20,40,60); // valor maximo
+       document.write(max+"<br>");
+
+       var min = Math.min(1,2,0.5,3,2); // valor min
+       document.write(min+"<br>");
+
+   </script>
+</head>
+<body>
+    <br/>
+    Constante             Descrição
+        Math.E       Retorna o número Euler
+        Math.PI      Retorna o número PI
+        Math.SQRT2   Retorna a raiz quadrada de 2
+        Math.SQRT1_2 Retorna a raiz quadrada de ½
+        Math.LN2     Retorna o logaritmo natural de 2
+        Math.LN10    Retorna o logaritmo natual de 10
+        Math.LOG2E   Retorna base 2 do logaritmo de E
+        Math.LOG10E  Retorna base decimal do logaritmo de E
+
+     Método                 Descrição
+        abs(x)           Retorna o valor absoluto de X
+        acos(x)          Retorna o arco cosseno de X
+        asin(x)          Retorna o arco seno de X
+        atan(x)          Retorna o arco tangente de X como um valor numérico entre PI/2 e PI/2 radiano
+        atan2(y,x)       Retorna o arco tangente do quociente dos argumentos y e x
+        ceil(x)          Retorna o valor de X arredondado para cima
+        cos(x)           Retorna o cosseno de x em radianos
+        exp(x)           Retorna o valor de Ex
+        floor(x)         Retorna o valor de X arredondado para baixo
+        log(x)           Retorna o logaritmo natural (base E) de x
+        max(x,y,z,...,n) Retorna o maior valor dos argumentos
+        min(x,y,z,…,n)   Retorna o menor valor dos argumentos
+        pow(x,y)         Retorna o valor de x elevado a y
+        random()         Retorna um número aleatório entre 0 e 1
+        round(x)         Retorna o inteiro mais próximo, arredonda para cima ou para baixo
+        sin(x)           Retorna o seno de x em radianos
+        sqrt(x)          Retorna a raiz quadrada de x
+        tan(x)           Retorna a tangente do ângulo x
+<br/><br/>
+        
+</body>
+</html>
