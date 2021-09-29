@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get elements By Tag name</title>
+</head>
+<body>
+    <p>CFB Cursos</p>
+    <p>Curso De Javascript</p>
+    <h1>Aula 25</h1>
+    <p>www.youtube.com/cfbcursos</p>
+    <p>cfbcursos.com.br</p>
+
+    <hr />
+
+    <script>
+        // pegar todos os elemntos
+        var tagAll = document.getElementsByTagName("*");
+        tagAll[9].innerHTML="eu troquei você";
+        tagAll[9].style.background="green";
+
+        //mudando o terceiro elemento
+        var txt3 = document.getElementsByTagName("p")[3];
+        txt3.style.fontSize="50px";
+
+        //pegando todos os p
+        var txtP = document.getElementsByTagName("p"); // nome da tag que eu quero alterar
+        txtP[0].style.color="red";                     // ele recebe os elemento com vetor então para mudar eu preciso declara a posição entre parenteses
+        txtP[1].style.background="silver";              
+       
+
+        //formatando todos os p
+        for(var i=0; i<txtP.length; i++){
+            txtP[i].style.fontWeight="bolder";
+        }
+   
+         
+        // pegando o valor
+        document.write(txtP[4].innerHTML);
+   </script>
+</body>
+</html>
