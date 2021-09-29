@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListener</title>
+    <style>
+        #div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background: #f00;
+            position: absolute;
+            left: 0px;
+            top:0px;
+        }
+    </style>
+    <script>
+        //escrevendo uma mensagem com alert
+        function msg(){
+           alert("ola");
+        }
+        //mudando a cor de fundo
+        function colorOver(){
+            var obj = document.getElementById("div");
+            obj.style.background="#00f";
+            obj.style.border="5px dotted pink";
+        }
+        //recebendo cor e objeto
+        function colorOut(obj,cor){
+             obj.style.backgroundColor=cor;
+            
+        }
+        function addEvents(){
+        //  chamando o meu id. addEventelistener("evento", função)
+        var obj = document.getElementById("div");
+        obj.addEventListener("click",msg);
+        obj.addEventListener("mouseover",colorOver);
+        //passando objeto e cor
+        obj.addEventListener("mouseout",function(event){
+            colorOut(obj,"#fff");
+        });
+        }
+        // sem esse window não funciona
+        window.addEventListener("load",addEvents);
+    </script>
+</head>
+<body>
+    <div id="div">
+        esse addEventelistener é para não mistura o meu codigo HTML com o Javascript, eu coloquei ele dentro de uma função que ele não 
+        conseguia encontra a minha div o window é quando carrega a pagina ele ter acesso ao conteudo
+    </div>
+</body>
+</html>
