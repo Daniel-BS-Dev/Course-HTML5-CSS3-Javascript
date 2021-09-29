@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form With Javascript</title>
+    <style>
+        label{
+            display: block;
+
+        }
+        input{
+            display: block;
+
+        }
+        input[type=submit],label{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form name="curso1" id="curso1" action="#" method="post">
+        <label>Nome:</label>
+        <input type="text" name="Fname" id="test" value="first-1">
+        <label>Senha:</label>
+        <input type="password" name="fpassword" value="123">
+        <input type="submit" name="btSend" value="SEND">
+    </form>
+    <hr>
+    <form name="curso2" id="curso2" action="#" method="post">
+        <label>Nome:</label>
+        <input type="text" name="Fname" id="test" value="second-2">
+        <label>Senha:</label>
+        <input type="password" name="fpassword" value="123">
+        <input type="submit" name="btSend" value="SEND">
+    </form>
+
+    <script>
+       // para manipular um form eu tenho que pegar o id do formulario depois a posição do elemento depois o que eu quero manipular: name, value..
+       document.write(document.getElementById("curso1").element[0].value); // o getElementById pode ser forms.namedItem ou o getElement
+       // forms aponta para o formulario
+       var quantityForm = document.forms.length;
+       document.write(quantityForm + "<br>"); // retornando a quantidade de forms
+    
+       // pegando form por posição 0
+       var positionForm = document.forms[0].id;
+       document.write(positionForm +"<br>");   // retornando o id do form 1
+
+       // outra maneira de pegar o id ou name..., é usando o item
+       var itemForm = document.forms.item(1).name;
+       document.write(itemForm+"<br>");    // retornando o name do form 2
+
+       // outra maneira é o namedItem
+       var namedItemForm = document.forms.namedItem("curso1").name;
+       document.write(namedItemForm+"<br>"); // retornando o name do form com id "curso1"
+
+       // ao invés de retornar o id ou name, eu posso retornar o form
+       var returnForm = document.forms.namedItem("curso1").innerHTML;
+       document.write(returnForm+"<br>");   // retornando todo o conteúdo do form com id "curso1"
+
+       // apontando para elementos dentro do form
+       var elementForm = document.forms.namedItem("curso1").elements[0].value; // pegando o elemento na posição 0
+       document.write(elementForm+"<br>");   // retornando o value no elemento na posição 0 dentro do meu form com id "curso1"
+
+       // manipulando form
+       var fm = document.forms[1];    // peguei o form que eu quero 
+       var el = fm.elements;         // peguei todos os elementos dentro dele
+
+       el[0].style.background="silver"; // manipulando o primeiro elemento
+       el[0].value="Daniel";         // peguei o valor
+
+       // formatando todos os elementos dentro do meu form
+       var allElements = document.forms[0];
+       var element = allElements.elements;
+       
+       for(var i=0; i<element.length; i++){
+           element[i].style.color="green";
+           element[i].style.fontWeight="bold";
+           
+       }
+    </script>
+</body>
+</html>
