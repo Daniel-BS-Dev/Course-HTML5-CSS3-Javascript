@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <script>
+        // function nome(){}
+        function write(){
+            document.write("Curso de Javascript"+"<br>");
+        }
+        write(); // chamando a função
+
+        // com parametros
+        function sum(n1, n2){
+            var res=n1+n2;
+            document.write(res+"<br>");
+        }
+        sum(5,2);
+        sum(15,22);
+
+        // função retornando valores
+        function subtraction(n1,n2){
+            return n1-n2;
+        }
+        var value = subtraction(5,2);
+        document.write(value+"<br>");
+
+        // passando vetores
+        var numbers = new Array(10,2,5,30,25,19,20,50);
+
+        function average(number){
+            var size = number.length;
+            var sum = 0;
+            for(var i=0; i<size; i++){
+                sum += number[i];
+            }
+            return Math.round(sum/size);
+        }
+       document.write(average(numbers));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
