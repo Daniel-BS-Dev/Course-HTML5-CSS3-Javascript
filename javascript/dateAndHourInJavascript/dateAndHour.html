@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date And Hour In Javascript</title>
+</head>
+<body>
+    Método                Descrição                                    Exemplo
+   getDay();           Retorna o dia da semana, domingo=0, segunda=1   var diaSem=data.getDay();
+   getDate();          Retorna o dia do mês                            var dia=data.getDate();
+   getMonth();         Retorna o mês, janeiro=0, fevereiro=1           var mes=data.getMonth();
+   getFullYear();      Retorna o ano com 4 dígitos, ex: 2015           var ano=data.getFullYear();
+   getHours();         Retorna a hora                                  var hora=data.getHours();
+   getMinutes();       Retorna os minutos                              var minutos=data.getMinutes();
+   getSeconds();       Retorna os segundos                             var segundos=data.getSeconds();
+   toDateString();     Retorna a data por estêncil, padrão EUA         var dataTexto=data.toDateString();
+   toDateString();     Retorna a data no formato 16/12/2015            var dataPadrao=data.toLocaleDateString();
+   toLocaleString();   Retorna a data e a hora 16/12/2015 23:13:00     var dataHoraTexto=data.toLocaleString();
+<br/><br/>
+<script>
+    document.write(Date()+"<br>"); //Wed Sep 29 2021 11:54:15 GMT-0300 (Horário Padrão de Brasília)
+
+   // manipulando a data
+   var dt    = new Date();
+   var newDate = new Date(1997,03,19,10,30,59,00); // ano, mes, dia, hora, min, seg, mil
+   var mouth = dt.getMonth();        // pegando o mês. e vetor começa em 0
+   var year  = dt.getFullYear();     // pegando o ano
+   var dayOfTheMouth = dt.getDate();// pegando dia do mês
+   var dayOfTheWeek  = dt.getDay(); // pegando o dia da semana. Lembrando que ele vai me retornar em vetor
+   var data=dt.toDateString();      // pegando a data dia mês ano e dia do mês
+   var dataPadrao=dt.toLocaleDateString();
+   
+   document.write(dayOfTheWeek+"<br>");
+   document.write(mouth+"<br>");
+   document.write(year+"<br>");
+   document.write(dayOfTheMouth+"<br>");
+   document.write(data+"<br>");
+   document.write(dataPadrao+"<br>");
+   document.write(newDate+"<br>");
+</script>
+</body>
+</html>

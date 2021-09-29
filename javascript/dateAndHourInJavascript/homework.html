@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Date</title>
+</head>
+<body>
+    <script>
+        var dt = new Date();
+        var newDate = new Date();
+    
+
+        ndt.setDate(dt.getDate() + 10);// os mesmos metodos que eu uso no get eu uso com set
+
+        var mouth = dt.getMonth();
+        var day   = dt.getDay();
+        var year  = dt.getFullYear();
+        var hour  = dt.getHours();
+        var minute= dt.getMinutes();
+        var second= dt.getSeconds();
+
+        var mouthsOfTheYear = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+        var dayOfTheWeek    = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+        document.write(dayOfTheWeek[day]+"/"+mouthsOfTheYear[mouth]+"/"+year +":"+ hour+":"+minute+":"+second);
+    </script>
+</body>
+</html>
