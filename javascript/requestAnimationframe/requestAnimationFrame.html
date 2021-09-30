@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Animation Frame</title>
+    <style>
+        #player{
+            position: absolute;
+            top: 0px;
+            left:120px;
+            background: #00f;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        var player;
+        var speed;
+        var diretionX;
+        var diretionY;
+        var positionX;
+        var positionY;
+        var anima;
+        var stage;
+
+        function start(){
+            speed=10;
+            diretionX=1;// se eu quiser deslocar pra esqueda -1
+            diretionY=0;
+            positionX=120;
+            positionY=0;
+            stage=1;
+            player=document.getElementById("player");
+            player.addEventListener("click",moveStop);
+            document.getElementById("move").addEventListener("click",move);
+            document.getElementById("stop").addEventListener("click",stop);
+            //player.addEventListener("click",function(){
+              //  cancelAnimationFrame(anima);// cancela a animação
+            //});
+            game();
+        }
+        function moveStop(){
+            if(stage){
+              stage=0;
+              player.style.background="red";
+              cancelAnimationFrame(anima);
+            }else{
+                stage=1;
+                player.style.background="blue";
+                anima=requestAnimationFrame(game);
+            }
+         }
+         function move(){
+             if(!stage){
+                stage=1;
+                player.style.background="blue";
+                anima=requestAnimationFrame(game);
+             }
+         }
+         function stop(){
+              stage=0;
+              player.style.background="red";
+              cancelAnimationFrame(anima);
+         }
+        function game(){
+            positionX += (diretionX*speed);
+           // positionY += (diretionY*speed);
+            player.style.left=positionX+"px";
+            //player.style.top=positionY+"px";
+            if(positionX > 800){
+                diretionX =- 1;
+            }else if(positionX < 120){
+                diretionX = 1;
+            }
+            anima = requestAnimationFrame(game);
+        }
+
+        window.addEventListener("load", start);
+
+    </script>
+</head>
+<body>
+    <div id="player"></div>
+    <button id="stop">Parar</button>
+    <button id="move">mover</button>
+</body>
+</html>
