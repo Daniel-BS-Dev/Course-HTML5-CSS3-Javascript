@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Key down</title>
+    <style>
+         #div{
+             width: 100px;
+             height: 100px;
+             border: 1px solid #000;
+             background-color: #F00;
+             position: absolute;
+             left: 0px;
+             top: 0px;
+         }
+    </style>
+    <script>
+        var px=0;
+        var py=0;
+        // função anonima
+          document.addEventListener("keydown", function change (event){ 
+              var obj = document.getElementById("div"); // pegando id do elemento que recebera a função
+              var tecla = event.keyCode;                // pegando o keycode
+             //37-esquerda 38-cima 39-direta 40-baixo
+            switch(tecla){
+                case 37:
+                    px-=10; // 10 é o tamanho do meu deslocamento
+                    obj.style.left=px+"px"; //o p entre aspas é os pixels
+                    break;
+                case 38:
+                    py -= 10;
+                    obj.style.top=py+"px";
+                    break
+                case 39: 
+                    px += 10;
+                    obj.style.left=px+"px";
+                    break; 
+                case 40:
+                    py += 10;
+                    obj.style.top=py+"px";
+                    break;
+                case 13:  // 13 é a tecla enter
+                    alert("Evento keydown Removido");
+                    this.removeEventListener("keydown",change); // this = essa função, remove... remove a função,
+                    // keydown a função que eu quero remover, change nome da função            
+                }
+            });
+            /*com função
+            function move(){
+                var obj = document.getElementById("div");
+                var tecla = event.keyCode;
+                switch(tecla){
+                case 37:
+                    px-=10; // 10 é o tamanho do meu deslocamento
+                    obj.style.left=px+"px"; //o p entre aspas é os pixels
+                    break;
+                case 38:
+                    py -= 10;
+                    obj.style.top=py+"px";
+                    break
+                case 39: 
+                    px += 10;
+                    obj.style.left=px+"px";
+                    break; 
+                case 40:
+                    py += 10;
+                    obj.style.top=py+"px";
+                    break;
+                case 13:
+                    alert("Evento Removido");
+                   this.removeEventListener("keydown",move);
+                }
+            }
+            document.addEventListener("keydown",move);
+            */
+    </script>
+</head>
+<body>
+    <!--movimentando a div-->
+    <div id="div"></div>
+</body>
+</html>
