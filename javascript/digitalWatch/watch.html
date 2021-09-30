@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <style>
+        #watch{
+            text-align: center;
+            color: #0f0;
+            font-weight: bold;
+            font-size: 30px;
+            width: 130px;
+            background-color: #000;
+        }
+    </style>
+    <script>
+        function watch(){
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+
+            if(hour < 10){
+                hour="0"+hour;
+            }
+            if(minute < 10){
+                minute="0"+minute;
+            }
+            if(second < 10){
+                second="0"+second;
+            }
+
+            var hours = hour+":"+minute+":"+second;
+            document.getElementById("watch").value=hours;
+        }
+        var time = setInterval(watch, 1000);
+    </script>
+</head>
+<body>
+    <input type="text" id="watch">
+</body>
+</html>
