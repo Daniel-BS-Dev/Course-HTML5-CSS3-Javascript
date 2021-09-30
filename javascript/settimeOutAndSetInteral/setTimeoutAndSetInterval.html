@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout and setInterval</title>
+    <style>
+       #div{
+           width:100px;
+           height: 100px;
+           border: 1px solid #000;
+           background: #fff;
+       }
+    </style>
+    <script>
+        var tmp;
+
+        function changeColor(){
+            var obj = document.getElementById("div");
+            var r=Math.floor(Math.random()*255);
+            var g=Math.floor(Math.random()*255);
+            var b=Math.floor(Math.random()*255);
+            obj.style.background="rgb("+r+","+g+","+b+")";
+        }
+        // mudar as cores 
+        function start(){
+           tmp = setInterval(changeColor, 1000);
+        }
+        // para de mudar
+        function stop(){
+          clearInterval(tmp);
+        }
+
+        function addEvent(){
+        document.getElementById("bt1").addEventListener("click",start);
+        document.getElementById("bt2").addEventListener("click",stop);
+        }
+        // ele vai executar minha função depois de 3s, primeiro passo a função depois o tempo da execução. chama a função só uma fez
+       // var tmp = setTimeout(changeColor,3000);
+
+//vai executar minha função a cada 0,5s, primeiro passo a nome da função depois o tempo da execução. chama em loop
+      // var tmp = setInterval(changeColor,500);
+
+// chama minha função todas as vezes que atualizo a pagina
+       window.addEventListener("load",addEvent);
+    </script>
+</head>
+<body>
+    <div id="div"></div>
+    <br/>
+    <button id="bt1">iniciar</button>
+    <button id="bt2">parar</button>
+</body>
+</html>
