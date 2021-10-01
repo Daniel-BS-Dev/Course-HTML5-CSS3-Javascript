@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caracteres Especiais</title>
+</head>
+<body>
+   <p >
+    caracteres especiais na string 
+    Em alguns momentos vamos precisar usar aspas, adicionar tabulação, quebra de linha, etc, em nossas strings e para 
+     estes casos temos que indicar estes caracteres dentro da string, veja um exemplo a seguir de uma string com aspas.
+   
+     Código Descrição
+     \n     Quebra de linha.
+     \r     Retorno de carro, ENTER
+     \t     Tabulação TAB
+     \b     Backspace
+     \f     Form feed, adiciona um espaço
+
+   </p>
+   <script>
+       var text=" Canal \"Fessor\" Bruno "; // incrimindo com as aspas = Canal "Fessor" Bruno;
+       var text2=" Canal \\Fessor\\ Bruno "; // saida =  Canal \Fessor\ Bruno
+       var text3=" Canal \nFessor\n Bruno "; // funciona para o alert quebra a linha
+       document.write(text);
+       document.write(text2);
+       alert(text3);
+
+       
+      
+
+   </script>
+</body>
+</html>
