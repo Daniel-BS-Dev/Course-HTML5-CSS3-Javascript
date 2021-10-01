@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concat</title>
+</head>
+<body>
+    <p id="txt">Concatena, funde, une, junta uma string em outra, no código a seguir juntamos as strings txt1 e txt2.</p>
+
+    <script>
+        var text = document.getElementById("txt").innerHTML;
+        var txt2 = " - CFB CURSOS";
+        var res=text.concat(txt2);
+        document.write(res);
+
+        var text = document.getElementById("txt").innerHTML;
+        var txt2 = " - CFB CURSOS";
+        var txt3 = " - DANIel"
+        var res=text.concat(txt2 + txt3);// juntando mais de uma texto
+        document.write(res);
+    </script>
+</body>
+</html>
