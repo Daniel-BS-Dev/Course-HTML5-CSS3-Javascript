@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute</title>
+    <style>
+        #car{
+            width: 200px;
+            height: 379px;
+        }
+        .c1{
+            background-image: url('../../images/simage.jpg');
+        }
+        .c2{
+            background-image: url('../../images/sbrazil.jpg');
+        }
+        .c3{
+            background-image: url('../../images/seta.png');
+        }
+    </style>
+    <script>
+        function addCar(){
+            // class -> tipo do atributo, c1 -> nome do atributo
+        document.getElementById("car").setAttribute("class","c1");
+        }
+        window.addEventListener("load",addCar);
+    </script>
+</head>
+<body>
+    <div id="car"></div>
+    <!--
+    setAttribute() 
+        A utilização deste método é bem simples, basta informar dois parâmetros de entrada (strings), o primeiro referente 
+        ao nome do atributo HTML que deseja adicionar à tag e o segundo referente ao valor do atributo.
+        Veja um exemplo a seguir onde adicionamos a classe CSS “txth1” na tag que tem id=“cfb”.
+        document.getElementById("cfb").setAttribute("class","txth1");
+      -->
+    </body>
+</html>

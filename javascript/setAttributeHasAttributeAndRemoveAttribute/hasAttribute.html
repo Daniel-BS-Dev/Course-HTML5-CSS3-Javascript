@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Has Attribute</title>
+    <style>
+        #id{
+            border: 1px solid #000;
+            width: 500px;
+        }
+    </style>
+    <script>
+        function verify(){
+            var obj = document.getElementById("id");
+            if(obj.hasAttribute("id")){
+                alert("id esta na div");
+            }
+        }
+        window.addEventListener("load",verify);
+    </script>
+</head>
+<body>
+    <div id="id">
+        Outro comando que podemos usar para controlar os atributos nas tags htmls é o comando “hasAttribute()”, este 
+        método simplesmente verifica se a tag já possui o atributo indicado, se possuir o método retorna “true” se não 
+        possuir o método retorna “false”
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Attribute</title>
+    <style>
+         #car{
+             border: 1px solid #000;
+             width: 500px;
+         }
+    </style>
+    <script>
+        function remove(){
+        var obj = document.getElementById("car");
+        obj.removeAttribute("id");// passo o tipo de atributo que quero remover
+        }
+        window.addEventListener("load",remove);
+    </script>
+</head>
+<body>
+    <div id="car">
+        De forma contrária ao conteúdo anterior, nós podemos remover atributos das tags html, o processo é bem simples, 
+        veja um exemplo de comando para remover o atributo “style” da tag com id “cfb”.
+        document.getElementById("cfb").removeAttribute("style");
+    </div>
+</body>
+</html>
