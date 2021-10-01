@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexOf</title>
+</head>
+<body>
+    <p id="text">Retorna a posição do primeiro caractere especificado a ser encontrado
+    </p>
+    <script>
+        var txt = document.getElementById("text").innerHTML;
+        var res = txt.indexOf("R");// se o resultado menor que 0 significa que ele não encontrou
+        var res2 = txt.lastIndexOf("r"); // retorna o ultimo encontrado
+
+        document.write(res+"<br>");
+        document.write(res2);
+    </script>
+</body>
+</html>

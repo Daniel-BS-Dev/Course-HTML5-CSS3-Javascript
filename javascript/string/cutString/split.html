@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split</title>
+</head>
+<body>
+   <p id="id">O método split() subdivide uma string sempre que encontrar o caractere especificado como divisor, no nosso código 
+    definimos o caractere divisor sendo o espaço, desta maneira será criado um array e em cada posição do array será 
+    inserida uma ocorrência
+   </p>
+   <script>
+       var text = document.getElementById("id").innerHTML;
+       var res = text.split(" ");
+       document.write(res[10]); // o que vai aparecer pra mim é " caractere"
+       var result =text.split(" ",2);
+       document.write(result);// vai mostra até a 2 divisão "o metodo"
+
+   </script>
+</body>
+</html>

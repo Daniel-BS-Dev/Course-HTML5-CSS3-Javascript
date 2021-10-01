@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocaleCompare</title>
+</head>
+<body>
+    <p id="txt">
+        localeCompare() 
+      Este método compara duas strings, se forem iguais retorna “0” zero, se a primeira for menor que a segunda retorna 
+    “-1” e se for maior, retorna “1”, então qualquer valor diferente de zero significa que as strings não são iguais.
+    </p>
+    <script>
+        var text = document.getElementById("txt").innerHTML;
+        var text1 = "eu estou aqui";
+        var res = text.localeCompare(text1);
+
+        document.write(res);
+    </script>
+</body>
+</html>
