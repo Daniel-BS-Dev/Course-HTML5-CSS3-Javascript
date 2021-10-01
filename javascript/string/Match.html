@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match</title>
+</head>
+<body>
+    <p id="txt">
+        match() 
+        O método match procura um texto especificado em uma string, o método pode retornar o valor procurado como 
+        único valor de retorno, um array com todas as ocorrências encontradas ou “null” caso nada seja encontrado
+    
+      modificadores      descrição 
+      i                  busca sem case-sensitive, ou seja, não diferencia letras maisculas de minuscula
+      g                  diz ao método para encontras todas as ocorrencias da palavra e não parar na primeira encontrada, cada ocorrencia é armazenada em uma posição do array
+      m                  pesquisa normal sem armazenar em forma de array  
+      
+      Metacaratere Descrição
+        \w Pesquisa somente por letras e numerais, ignorando espaços, traços, etc.
+        \W Pesquisa por caracteres diferentes de números e letras
+        \d Pesquisa por numerais
+        \D Pesquisa por todos os caracteres que não são numerais
+        \s Pesquisa pelos espaços
+        \S Pesquisa por todos os caracteres, menos os espaços
+        \b Pesquisa por ocorrência que iniciem ou terminem com uma letra ou número, cada ocorrência que iniciar e 
+           terminar com um número ou letra conta como 2
+        \B Pesquisa por ocorrência que NÃO iniciem ou terminem com uma letra ou número
+        \O Procura por caracteres nulos.
+        \n Procura por quebra de linha.
+        \r Procura por caractere de “retorno de carro” ENTER.
+        \t Procura por caractere de tabulação TAB
+        \v Procura por caractere de tabulação vertical
+        s+ Procura por palavras que contenham uma ou mais letras “s”
+
+    </p>
+    <script>
+        var text = document.getElementById("txt").innerHTML;
+        var res = text.match("um");// entre parentes eu coloco o que eu quero encontra
+
+        document.write(res+"<br>");// mostra a palavra
+        document.write(res.length+"<br>"); // mostra o numero
+
+        res = text.match(/um/g);// mostra todos os "um" que tem no texto
+        document.write(res+"<br>");
+
+        res = text.match(/o/ig);// sem o case procurando todos as palavras
+        document.write(res.length +":"+res+"<br>");
+
+        res = text.match(/[ea]/ig); // procurando todas as letras e a
+        document.write(res.length +":"+res+"<br>");
+
+        res = text.match(/[^ae]/ig); // procura todas as caracteres exceto a e
+        document.write(res.length +":"+res+"<br>");
+
+        res = text.match(/[a-g]/ig);// entre A e G
+        document.write(res.length +":"+res+"<br>");
+
+        res = text.match(/\s/ig);// Pesquisa por todos os caracteres, menos os espaços
+        document.write(res.length +":"+res+"<br>");
+    </script>
+</body>
+</html>
