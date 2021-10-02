@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <script>
+        var aux = location.hash; // pegar o http
+        var h = location.href="http://www.youtube.com/cfbcursos";
+        location.assign("trim.html");// posso direcionar par uma url
+        location.replace("http://www.youtube"); // remove a url do historico o assign não remove
+    </script>
+</head>
+<body>
+    <p>
+ O objeto location contém informações sobre a URL atual do browser.Confira as tabelas a seguir com as propriedades e os métodos do objeto.
+
+Propriedade                 Descrição
+hash                   Retorna ou configura parte da url após o caractere #, inclusive o caractere #
+host                   Retorna ou configura o nome do host da página e o número da porta usada
+hostname               Retorna ou configura o nome do host da página
+href                   Retorna ou configura a url da página
+origin                 Retorna o protocolo de origem, host name e número da porta
+pathname               Retorna ou configura a url da página, caminho, após o host
+Port                   Retorna ou configura o número da porta da url
+protocol               Retorna ou configura o protocolo da página
+search                 Retorna ou configura as informações “querystring”, após o ? da url
+
+Método                      Descrição
+assign()                 Carrega um novo documento
+reload()                 Re-carrega o documento atual
+request()                Substitui o documento atual por outro
+    </p>
+</body>
+</html>
