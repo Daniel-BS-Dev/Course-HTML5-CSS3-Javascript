@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollBy</title>
+   <style>
+    #painel{
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 15px;
+        width: 3000px;
+        height: 2000px;
+
+    }
+   </style>
+   <script>
+
+      function scroll(){
+         window.scrollBy(1000, 1000); // rola minha pagina em 1000 no x e 1000 no y
+    
+      }
+
+       function start(){
+        document.getElementById("id").addEventListener("click",scroll);
+        
+       }
+
+       window.addEventListener("load", start);
+
+       
+   </script>
+</head>
+<body>
+    <button id="id">Tamanho</button>
+    <div id="painel"></div>
+    innerWidth and innerHeight vai me retornar o tamnho interno da janela sem contar barras
+    outWidth and outerHeight vai retornar a parte externa contando as barras
+</body>
+</html>
