@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen</title>
+    <style>
+       #id{
+           width: 400px;
+           height: 500px;
+           border: 1px solid #000;
+           padding: 10px;
+           border-radius: 10px;
+       }
+    </style>
+    <script>
+        var painel;
+        function start(){
+            
+          painel = document.getElementById("id");
+          painel.innerHTML += "<hr>";
+          painel.innerHTML += "Largura Total: "+screen.width + "px<hr>";
+          painel.innerHTML += "Altura Total: "+screen.height + "px<hr>";
+          painel.innerHTML += "Largura sem barras: "+screen.availWidth + "px<hr>";
+          painel.innerHTML += "Altura sem barras: "+screen.availHeight + "px<hr>";
+          painel.innerHTML += "Profundidade das cores(imagem): "+screen.colorDepth + "px<hr>";
+          painel.innerHTML += "Resuloção cor da tela (imagem): "+screen.pixelDepth + "px<hr>";
+    
+
+
+        }
+
+        window.addEventListener("load", start);
+    </script>
+</head>
+<body>
+    <p id="id">O objeto screen contém uma série de informações sobre a tela do usuário como largura, altura, cores, etc.
+        Propriedade         Descrição
+        availHeight       Altura do browser excluindo a barra de tarefas da janela
+        availWidth        Largura do browser excluindo a barra de tarefas da janela
+        colorDepth        Retorna a profundidade da paleta de cores
+        height            Altura total da janela
+        pixelDepth        Retorna a resolução da paleta de cores
+        width             Largura total da janela
+
+    </p>
+
+
+</body>
+</html>

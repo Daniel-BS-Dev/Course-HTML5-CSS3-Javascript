@@ -30,10 +30,10 @@
             painel.innerHTML +="Localização: "+ navigator.geolocation +"<hr>";      // retorno o  objeto para obter a localização tenho que usar o metodo abaixo
             navigator.geolocation.getCurrentPosition(localizar) ; // para conseguir a localização eu vou criar as funções localizar
             painel.innerHTML +="Idioma: "+navigator.language+"<hr>";               // idioma 
-            painel.innerHTML +="Online: "+navigator.onLine+"<hr>";                  // se o browser esta online
-            painel.innerHTML +="S.O: "+navigator.platform+"<hr>";                   // sistema operacional
-            painel.innerHTML +="Engine: "+navigator.product+"<hr>";                  // o engine
-            painel.innerHTML +="Agente: "+navigator.userAgent+"<hr>";                  // qual agente foi enviado pelo servidor
+            painel.innerHTML +="Online: "+navigator.onLine+"<hr>";                 // se o browser esta online
+            painel.innerHTML +="S.O: "+navigator.platform+"<hr>";                  // sistema operacional
+            painel.innerHTML +="Engine: "+navigator.product+"<hr>";                // o engine
+            painel.innerHTML +="Agente: "+navigator.userAgent+"<hr>";              // qual agente foi enviado pelo servidor
         }
 
         window.addEventListener("load", verify);
