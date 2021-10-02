@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+    <script>
+        var myWindow;
+
+          //Abrir uma nova janela
+        function openWindow(){
+           myWindow = window.open("../string/trim.html","_blank","width=300, height=300");
+        }
+         //fechar janela
+        function closeWindow(){
+           myWindow.close();
+        }
+    </script>
+</head>
+<body>
+    <!--button open-->
+    <button onclick="openWindow()">Abre nova janela</button>
+    <!--button close-->
+    <button onclick="closeWindow()">fechar</button>
+    <p>
+        Confira a seguir a sintaxe com os parâmetros que podem ser usados.
+            window.open(url, target, especificações, replace);
+
+            url = Neste parâmetro podemos informar uma url de um site ou um nome de arquivo (html, imagem, etc) que será 
+            aberto na nova janela.
+
+            target = Especifica como a nova janela será aberta, se será aberta em uma nova janela, ou na janela atual, veja a 
+            tabela a seguir para os valores possíveis para este parâmetro.
+
+            Parâmetro         Descrição
+            _blank          Abre em uma nova janela, separada da atual
+            _self           Abre na mesma janela, sobrepondo a página atual
+            nome            Abre a nova janela dentro de outra especificada pelo nome
+
+            especificações = Uma série de propriedades para configuração da janela, confira a seguir uma tabela com as 
+            propriedades possíveis.
+
+            Propriedade                Descrição
+            channelmode=yes|no|1|0    Especifica se a janela vai ser exibida em modo “teatro” ou normal
+            fullscreen=yes|no|1|0     Abre na mesma janela em modo tela cheia, ocupando toda tela
+            width=pixels              Especifica a largura da janela
+            height=pixels             Especifica a altura da janela
+            left=pixels               Especifica a posição horizontal da janela
+            top=pixels                Especifica a posição vertical da janela
+            menubar=yes|no|1|0        Mostra ou esconde a barra de menu
+            status=yes|no|1|0         Mostra ou esconde a barra de status
+            titlebar=yes|no|1|0       Mostra ou esconde a barra de título
+            toolbar=yes|no|1|0        Mostra ou esconde a barra de ferramentas
+
+            replace = Especifica se a URL cria uma nova entrada ou substitui a entrada atual no histórico, os valores para este 
+            parâmetro são true ou false.
+
+     Veja o código a seguir que abre uma nova janela e carrega o site do google dentro dela
+            var janela=window.open("http://www.google.com.br","_blank","width=800,height=200,top=0,left=0,menubar=0,status=0");
+    </p>
+</body>
+</html>
