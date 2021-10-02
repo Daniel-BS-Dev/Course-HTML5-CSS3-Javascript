@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator</title>
+    <style>
+        #painel{
+           width: 400px;
+           height: 500px;
+           border: 1px solid #000;
+           border-radius: 10px;
+           padding: 10px;
+        }
+    </style>
+    <script>
+        var painel;
+
+        function localizar(position){
+           var coords = position.coords;
+           painel.innerHTML +="Localização: "+"lat: "+coords.latitude + " - Lon: "+coords.longitude+"<hr>";
+        }
+
+        function verify(){
+            painel=document.getElementById("painel");
+            painel.innerHTML="Nome do Browser: "+ navigator.appName +"<hr>";        // pegando o nome do browser
+            painel.innerHTML +="Versão do Browser: "+ navigator.appVersion +"<hr>"; // versão
+            painel.innerHTML +="Cookies: "+ navigator.cookieEnabled +"<hr>";        // os cookies esta ativos 
+            painel.innerHTML +="Localização: "+ navigator.geolocation +"<hr>";      // retorno o  objeto para obter a localização tenho que usar o metodo abaixo
+            navigator.geolocation.getCurrentPosition(localizar) ; // para conseguir a localização eu vou criar as funções localizar
+            painel.innerHTML +="Idioma: "+navigator.language+"<hr>";               // idioma 
+            painel.innerHTML +="Online: "+navigator.onLine+"<hr>";                  // se o browser esta online
+            painel.innerHTML +="S.O: "+navigator.platform+"<hr>";                   // sistema operacional
+            painel.innerHTML +="Engine: "+navigator.product+"<hr>";                  // o engine
+            painel.innerHTML +="Agente: "+navigator.userAgent+"<hr>";                  // qual agente foi enviado pelo servidor
+        }
+
+        window.addEventListener("load", verify);
+    </script>
+</head>
+<body>
+    <div id="painel"></div>
+</body>
+</html>
