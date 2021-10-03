@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HasFocus</title>
+    <script>
+        setInterval(focus, 0);
+        
+        function focus(){
+            var result = document.getElementById("isn't");
+            if(document.hasFocus()){
+                result.innerHTML="";
+            }else{
+                result.innerHTML=">> isn't <<";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div">Page's <span id="isn't"></span>on focus</div>
+    <p>
+        o hasFocus retorna true se o documento possui o foco, também possibilita saber se o usuário está 
+        trabalhando com múltiplas janelas ou abas, até mesmo se alternou para outro aplicativo saindo do navegador 
+        deixando-o em segundo plano
+    </p>
+</body>
+</html>
