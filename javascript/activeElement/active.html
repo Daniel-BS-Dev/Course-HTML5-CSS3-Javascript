@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActiveElement</title>
+    <script>
+        function activo(){
+           var element = document.activeElement.tagName; 
+           console.log(element);
+        }
+    </script>
+</head>
+<body onclick="activo()">
+    <input type="text" name="txt">
+    <button>teste</button>
+    <p>
+        A propriedade activeElement contém o elemento que está selecionado, que possui o foco no momento
+    </p>
+    <img src="../../images/simage.jpg" width="500" height="200">
+</body>
+</html>
