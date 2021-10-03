@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datasets</title>
+    <style>
+        .car{
+            width: 371px;
+            height: 750px;
+            display: inline;
+            cursor: pointer;
+        }
+        #painel{
+            border: solid 3px #000;
+            border-radius: 10px;
+            padding: 10px;
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function definePainel(){
+            var obj = event.target;
+            var painel=document.getElementById("painel");
+            painel.innerHTML="Cor: "+ obj.dataset.cor+"<hr>";
+            painel.innerHTML+="Pontencia: "+ obj.dataset.potencia+"<hr>";
+            painel.innerHTML+="Velocidade: "+ obj.dataset.velocidade;
+            console.log(obj);
+        }
+        function start(){
+            document.getElementById("c1").addEventListener("click",definePainel);
+        }
+      window.addEventListener("load",start);
+    </script>
+</head>
+<body>
+    <div id="painel"></div>
+    <!-- no data-nome="valor" -->
+    <div id="c1" class="car" data-cor="branco" data-potencia="110" data-velocidade="180">image1</div>
+    <div id="c2" class="car">image2</div>
+    <div id="c3" class="car">image3</div>
+    <div id="c4" class="car">image4</div>
+    <p>
+        Dataset é um recurso muito interessante, permite que adicionemos dados a elementos HMTL, como se fossem 
+        constantes, por exemplo podemos criamos um elemento e definimos uma série de atributos que funcionarão como 
+        informações deste elemento, que pode ser facilmente obtido por javascript
+    </p>
+</body>
+</html>
