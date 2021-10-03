@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertBefore and ChildNode</title>
+    <script>
+
+        function start(){
+            document.getElementById("buttonCount"). addEventListener("click",function(){
+                var list = document.getElementById("ulId");
+                var num = list.childNodes.length;     // contando o numero de elementos da lista
+                alert(num);
+            });
+           
+            document.getElementById("buttonId").addEventListener("click",function(){
+                var input = document.getElementById("inputId");
+                var list = document.getElementById("ulId");
+                var li = document.createElement("li");
+                li.textContent = input.value;
+                list.insertBefore(li,list.childNodes[0]);  //passo o elemento que eu quero inserir e antes de quem eu quero inserir. ele vai inserir antes da posição 0
+                input.value="";
+                input.focus();
+
+            });
+           
+        }
+        window.addEventListener("load",start);
+    </script>
+</head>
+<body>
+    <input type="text" id="inputId"><button id="buttonId">Adicionar</button><button id="buttonCount">Contar</button>
+    <ul id="ulId">
+
+    </ul>
+</body>
+</html>
