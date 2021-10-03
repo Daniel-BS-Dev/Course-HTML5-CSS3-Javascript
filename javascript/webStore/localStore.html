@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Store</title>
+    <script>
+        if(typeof(Store) != "underfine"){            // testando se o browser suporta o localStore
+        localStorage.setItem("canal","fesor");       // adicionar uma chave. Primeiro valor é a chave segundo value
+        var channel = localStorage.getItem("canal"); // pegando o conteúde de localstore. passo a chave
+        var channel2 = localStorage.canal;           // essa éoutra maneira de pegar o valor do meu localstore
+        document.write(channel+"<br>");
+        document.write(channel);
+        }
+        // vendo o numero de visitas em um site
+        if(localStorage.visit){
+            localStorage.visit = Number(localStorage.visit)+1; // Number é a minha coverção
+        }else{
+            localStorage.visit=1;
+        }
+        document.write("visitas: "+localStorage.visit);
+  </script>
+</head>
+<body>
+    <p>
+        localStorage guarda a chave e o valor permanente
+        sessionStore guarda a chave e o valor temporario
+    </p>
+</body>
+</html>

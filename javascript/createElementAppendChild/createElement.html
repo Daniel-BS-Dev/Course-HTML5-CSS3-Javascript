@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create  Element</title>
+    <script>
+
+        function start(){
+            var text=document.createElement("p"); // creando um novo elemento
+            text.textContent="CFB - Cursos";
+
+            document.body.appendChild(text);      // adicionando no body
+            
+        }
+     // outra maneira de criar uma texto
+     var text=document.createElement("p");
+     var txt = document.createTextNode("Curso de java script - CFB Cursos");
+
+     function start1(){
+        text.appendChild(txt);
+        document.body.appendChild(text); 
+
+     }
+     // exercicio com o createElement
+     function startExercise(){
+         var add=document.getElementById("btnAdd");         // pegando o id do meu botão
+         add.addEventListener("click",function(){
+             var list = document.getElementById("addList");// pegando o id da lista
+             var text = document.getElementById("fnovo"); //pegando id do input.
+             var li = document.createElement("li");      //pegando elemento que vai receber a adição
+             li.textContent=text.value;                 // escrevendo o valor do meu input na minha lista.O .value é por que estou pegando o valor do input
+             list.appendChild(li);                     // adicionando o valor na mina li na lista
+             text.value=" ";                          // depois de adicionar o value do meu input recebe null, para limpar o campo
+             text.focus();                           // o curso na sai do input tem auto foco
+            })
+     }
+        window.addEventListener("load",startExercise);
+    </script>
+</head>
+<body>
+    <input type="text" id="fnovo"><button id="btnAdd">Adicionar</button><br><br>
+    <ul id="addList">
+
+    </ul>
+</body>
+</html>
