@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>parentNode, remove and removeChild</title>
+    <script>
+        function start(){
+          var element =document.getElementById("p2");
+          alert(element.parentNode);           // vai imprimir o elemento pai
+          alert(element.parentNode.nodeName); // pegando o nome
+          element.remove();                   // vai excluir o elemento
+        // outro jeito de excluir
+        document.getElementById("p5").remove(); // exclui o elemento de id p5
+        }
+        window.addEventListener("load",start);
+        //outra maneira de exclusão
+        var element =document.getElementById("div").childNodes;
+        document.getElementById("div").removeChild(element[3]);
+    </script>
+</head>
+<body>
+    <div id="div">
+        <p id="p1" >
+            parentNode –> me retorna qual é o elemento pai de outro elemento que eu especificar
+            remove()   -> literalmente remove um elemento em nosso página
+        </p>
+        <p id="p2">Curso de Javascript</p>
+        <p id="p3">Curso de HTML/HTML5</p>
+        <p id="p4">Curso de PHP</p>
+        <p id="p5">Curso de C++</p>
+    </div>
+</body>
+</html>
