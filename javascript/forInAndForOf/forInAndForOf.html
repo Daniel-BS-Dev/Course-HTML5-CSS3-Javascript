@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in and For of</title>
+    <script>
+        // for in -> percorre objeto
+        // for of -> percorre array
+
+        const studant = {name:"bruno",sobrenome:"Campos"} 
+        const grade   = {n1:80, n2:75, n3:92, n4:85}
+        const info = {...studant,...grade}
+        
+        // for(var nomeVariavel in nomeDoObjeto)
+        for(var data in studant){
+            console.log(data);         // vai imprimir nome e sobrenome
+            console.log(studant[data]);// vai imprimir o valor
+        }
+
+        // of
+        let notas = [100, 75, 30, 47, 98, 60];
+        let aprovado = 0;
+        let reprovado= 0;
+        for(var n of notas){
+            n >= 60 ? aprovado++: reprovado++;
+        }
+        console.log("Aprovado: "+aprovado);
+        console.log("reprovado: "+reprovado);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

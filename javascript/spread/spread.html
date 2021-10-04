@@ -9,7 +9,16 @@
         const grade = [100, 30, 50,70,90,85]
         console.log(grade);     // retronar em array [100, 30, 50,70,90,85]
         console.log(...grade); // vai retornar de forma individual 100, 30, 50,70,90,85
-    </script>
+      
+
+        // outra maneira de usar o spread
+        const studant = {name:"bruno",sobrenome:"Campos"} // isso com {} não é uma array e sim uma objeto
+        const grade1   = {n1:80, n2:75, n3:92, n4:85}
+        const info = {...studant,...grade1}
+        console.log(info); // peguei todas as notas
+        console.log(info.name, info.sobrenome); // peguei só os nomes
+ 
+ </script>
 </head>
 <body>
     
