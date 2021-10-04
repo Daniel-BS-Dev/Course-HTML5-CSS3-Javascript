@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroolIntoView</title>
+    <style>
+        .car{
+           width:250px;
+           margin-bottom: 50px;
+        }
+        .menu_item{
+            height: 100%;
+            cursor: pointer;
+            flex: 1;
+        }
+        #menu{
+            border: solid 1px #000;
+            border-radius: 10px;
+            padding: 10px;
+            width: 600px;
+            height: 100px;
+            background-color: #fff;
+            display: inline;
+           
+
+        }
+        body{
+            padding: 0px;
+        }
+    </style>
+    <script>
+        function rolar(){
+           var obj = event.target.dataset.nome; // peguei as minhas imagem pelo data-name
+           document.getElementById(obj).scrollIntoView();
+        }
+        function start(){
+            document.getElementById("btnc1").addEventListener("click",rolar); // vai fazer a rolagem da minha pagina
+            document.getElementById("btnc2").addEventListener("click",rolar);
+            document.getElementById("btnc3").addEventListener("click",rolar);
+            document.getElementById("btnc4").addEventListener("click",rolar);
+       
+            document.getElementById("c4").hidden=true; // vai ser ocultado. false mostar
+         }
+        window.addEventListener("load",start);
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <img id="btnc1" data-nome="c1" src="../../images/sbrazil.jpg" class="menu_item">
+        <img id="btnc2" data-nome="c2" src="../../images/simage.jpg"  class="menu_item">
+        <img id="btnc3" data-nome="c3" src="../../images/seta.jpg"    class="menu_item">
+        <img id="btnc4" data-nome="c4" src="../../images/seta.png"    class="menu_item">
+    </div>
+        <img id="c1" src="../../images/sbrazil.jpg" class="car">
+        <img id="c2" src="../../images/simage.jpg"  class="car">
+        <img id="c3" src="../../images/seta.jpg"    class="car">
+        <img id="c4" src="../../images/seta.png"    class="car">
+</body>
+</html>
