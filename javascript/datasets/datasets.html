@@ -22,9 +22,9 @@
     </style>
     <script>
         function definePainel(){
-            var obj = event.target;
+            var obj = event.target; // pegando o dataset
             var painel=document.getElementById("painel");
-            painel.innerHTML="Cor: "+ obj.dataset.cor+"<hr>";
+            painel.innerHTML="Cor: "+ obj.dataset.cor+"<hr>"; // mostarndo os valores
             painel.innerHTML+="Pontencia: "+ obj.dataset.potencia+"<hr>";
             painel.innerHTML+="Velocidade: "+ obj.dataset.velocidade;
             console.log(obj);
