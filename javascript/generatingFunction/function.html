@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script>
+        //esta function receberá n1 e n2 e returnará a soma deles
+                  // 
+        function* colors(){
+           yield 'red';
+           yield 'green';
+           yield 'blue';
+           yield 'yellow';
+           yield 'brown';
+           yield 'black';
+           yield 'silver';
+           yield 'white';
+        }
+ for(let c of colors()){
+     console.log(c);
+ }
+// para imprimir só um elemento.cada next ele retorna uma yield, Não coloque o next acimar por que o for já colocar automaticamente
+const c = colors();
+console.log(c.next());
+console.log(c.next());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
