@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map part 2</title>
+    <script>
+        // inserindo um array
+         let car = new Map([
+             ["01", ["Mouse","R$10,75"]],
+             ["02", ["Teclado","R$35,75"]],
+             ["03", ["Monitor","R$10,75"]]
+            
+    ]);
+
+    for(n of car){
+        console.log(n[0][1]);  // mostra a chave
+        console.log(n[1][0]); // imprimir os nomes
+        console.log(n[1][1]); // imprimir os valores
+    }
+      // delete só um elemento
+      car.delete("Fiat");
+
+      // clear limpar tudo
+      car.clear();
+
+      
+
+        // forEach
+        let product = new Map([
+             ["01", "Mouse"],
+             ["02", "Teclado"],
+             ["03", "Monitor"]
+            
+    ]);
+   
+    function info(key, value){
+        console.log("Chave: "+ key + " - Valor: "+ value);
+    }
+  // percorrendo todo o map
+    product.forEach(info);
+
+  // mostra o primeiro valor da chave
+   let it = product.keys();
+   console.log(it.next().value);
+
+   // mostra o valor
+   let itv = product.values();
+   console.log(itv.next().value);
+
+   // procurando por chave
+   console.log(product.has("02"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

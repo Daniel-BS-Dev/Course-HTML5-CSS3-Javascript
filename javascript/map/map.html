@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script>
+        // criei o map
+        let product = new Map();
+
+        // para inserir uso o set
+        product.set("01","Mouse");
+        product.set("02","pen");
+        product.set("03","glue");
+        product.set("04","pincel");
+
+        //obter o tamanho
+        console.log(product.size);
+
+        // obter elemento
+        console.log(product.get("02"));
+
+        // iniciando meu map com valores
+        let car = new Map([
+            ["Fiat","onu"],
+            ["Honda", "city"],
+            ["Ford","fordCar"]
+        ])
+      for(var n of car){
+          console.log(n);
+      }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
