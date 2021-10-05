@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        const Car = {
+            type:"fiat",
+            model:"Golf",
+            info:function(){
+                console.log("Marca :" +this.type);
+                console.log("Modelo :" +this.model);
+            }
+        }
+        // criando um novo objeto carro
+        let c2 = Object.create(Car);
+        // redefini o valor de Car 
+        Car.type="honda";
+        Car.model="HRV";
+        // info imprimirá honda e HRV
+        Car.info();
+        c2.info();
+        // usando vetor
+        Car["type"]  = "GM";
+        Car["model"] = "Camaro";
+        // impressão com vetor
+        console.log(Car["type"]);
+        console.log(Car.type);
+
+        // fazer meclagem de dois objetos
+        const Vehicle = {
+            type:"focus",
+            model:"fordCar",
+            info:function(){
+                console.log("Marca :" +this.type);
+                console.log("Modelo :" +this.model);
+            }
+        }
+        const Characteristics ={
+            color:"Silver",
+            exchange:"automatic",
+        }
+        // deletando a cor
+        delete Characteristics.color;
+
+        const Car1 = Object.assign(Vehicle,Characteristics);
+        console.log(Car1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
