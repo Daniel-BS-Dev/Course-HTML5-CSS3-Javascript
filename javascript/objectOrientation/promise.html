@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <script>
+
+        function count(n){
+            let toCount=0
+            for(let i=0;i<n; i++){
+                toCount++;
+            }
+            return toCount;
+        }
+
+        // contar 2s
+        function countT(n){
+            let toCount=0;
+            let t=setTimeout(()=>{
+                for(let i=0; i<n;i++){
+                    toCount++;
+                }
+            },2000);
+            
+            return toCount;
+        }
+        // Promise
+        function countP(n){
+            let toCount=0
+            // start e end pode ser qualquer nome
+            let p = new Promise((start, end) => {
+                for(let i=0;i<n; i++){
+                toCount++;
+            }
+            if(toCount==n){
+                start(toCount);
+            }else{
+                end('erro');
+            }
+            });
+           
+            return p;
+        }
+
+        console.log(1000);
+        countP(10)
+        .then(sucesso => (console.log('Sucesso:'+sucesso)))
+        .catch(erro => (erro));
+        
+        
+        // função assicrona com promise
+        function countPT(n){
+            let toCount=0
+            // start e end pode ser qualquer nome
+            let p = new Promise((start, end) => {
+            let t=setTimeout(()=>{
+                for(let i=0;i<n; i++){
+                toCount++;
+                }  
+            if(toCount==n){
+                start(toCount);
+            }else{
+                end('erro');
+              }
+            
+            },2000)
+        });
+         return p;
+        }
+        countPT(100)
+        .then(sucesso => (console.log('Sucesso:'+sucesso)))
+        .catch(erro => (erro));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
