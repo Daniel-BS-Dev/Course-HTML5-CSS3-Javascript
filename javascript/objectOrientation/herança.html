@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+    <script>
+        class Car{
+    
+            constructor(tpComb, tpCar){
+                this.tpCar = tpCar; // 1 passeio 2 transporte 3 combate
+                this.quantComb = 100;
+                this.tpComb = tpComb;
+                this.turnedOn= true;
+        
+
+            }
+            // creating a method
+            info(color){
+                console.log("Quantidade Combus...........: "+ this.quantComb);
+                console.log("Ligado......................: "+ this.turnedOn);
+                console.log("Tipo Combus.................: "+ this.tpComb);
+                if(this.tpCar==1){
+                    console.log("Tipo Carro................: Passeio");
+                }
+                else if(this.tpCar==2){
+                    console.log("Tipo Carro..................: Transporte");
+                }
+                else{
+                    console.log("Tipo Carro..................: Combate");
+                }
+            
+
+            }
+            turnOn(){
+                this.turnedOn = true;
+            }
+            turnOff(){
+                this.turnedOn = false;
+            }
+            
+        }
+        // criando outra classe herdeira
+         class CombatVehicle extends Car{
+             constructor(potShots){
+            // quando eu coloco o nome super eu estou acessando alguma coisa da classe pai
+            super("gasolina", 3);
+            this.shots=100;
+            this.potShots = potShots;
+            this.shielding = 100;
+             }
+             info(){
+                 //chamando o info do pai
+                 super.info();
+                 console.log("Quantidade do tiro..........: "+ this.shots);
+                 console.log("Potencia do tiro............: "+ this.potShots);
+                 console.log("Blidagem....................: "+ this.shielding);
+                 console.log("----------------------------------");
+                }
+         }
+        let c1 = new CombatVehicle(50);
+        let c2 = new CombatVehicle(100);
+        
+    
+         c1.turnOff();
+
+        // calling the method
+        c1.info();
+        c2.info();
+    </script>
+</head>
+<body>
+
+</body>
+</html> 
