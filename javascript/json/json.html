@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+    <script>
+        let colabJson = '{"colaboradores":['+
+        '{"nome":"Bruno","salario":1345,"idade":32},    '+
+        '{"nome":"Daniel","salario":1450,"idade":40},   '+
+        '{"nome":"Patricia","salario":8200,"idade":25}, '+
+        '{"nome":"nicodemus","salario":3500,"idade":38},'+
+        '{"nome":"Paulo","salario":5000,"idade":21}'+
+        ']}'
+
+        // parse    -> é quando eu tenho um json e quero transformar em um texto
+        //stringify -> quando eu tenho o obj ou o texto e quero tranformar em json
+        let c_obj=JSON.parse(colabJson);
+        
+        // mostra o array inteiro
+        console.log(c_obj);
+       
+        // mostra a primeira posição do meu array
+        console.log(c_obj.colaboradores[0]);
+
+        // mostrando o segundo nome
+        console.log(c_obj.colaboradores[0].nome);
+
+        let colabObj = [
+         {"nome":"Bruno","salario":1345,"idade":32},    
+         {"nome":"Daniel","salario":1450,"idade":40},  
+         {"nome":"Patricia","salario":8200,"idade":25}, 
+         {"nome":"nicodemus","salario":3500,"idade":38},
+         {"nome":"Paulo","salario":5000,"idade":21}
+        ]
+        // covertendo obj em json
+        let c_json = JSON.stringify(colabObj);
+        console.log("---------------------------");
+        console.log(c_json);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
