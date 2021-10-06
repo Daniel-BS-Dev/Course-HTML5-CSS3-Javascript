@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script>
+        // Map funcionar pra qualquer tipo de array
+        let number = [25,9,4,36];
+        // vai calcular a raiz quadrada
+        let raiz = number.map(Math.sqrt);
+
+        for(n of raiz){
+            console.log(n);
+        }
+
+        // criando função com map. n é o nome do meu map
+        let doble = number.map((n)=>{
+            return n*2;
+        })
+       for(i of doble){
+        console.log("Dobro: "+doble);
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

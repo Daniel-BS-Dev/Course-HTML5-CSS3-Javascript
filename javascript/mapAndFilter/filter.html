@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <script>
+        var number = [2,4,6,54,8,7,6,5,48,4,43,3,];
+        let newNumber = number.filter((n)=>{
+            return n >= 10;
+        })
+
+        console.log(newNumber);
+
+        var data = [
+             {id:15},
+             {id:0},
+             {id:-10},
+             {id:null},
+             {id:NaN},
+             {id:'undefined'},
+             {id:5.8},
+             {},
+             {id:2},
+        ]
+
+        let valid = data.filter((n)=>{
+            // usei o typeof o que é um objeto
+            if(typeof(n.id) == 'number' && !isNaN(n.id) && (n.id >= 0)){
+                return true;
+            }else{
+                return false;
+            }
+        })
+        console.log(valid);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
