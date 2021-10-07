@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align content</title>
+    <style>
+        .item{
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align:center;
+            font-size:1em;
+            color:#fff;
+             /* fazendo calculo, 20 e de margin e padding*/
+             width: calc(33.3333% - 20px);
+        }
+        .container{
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            height: 400px;
+           
+
+        }
+        /* Criando uma classe para aplicar nos conteiners que eu quero que seja flexivel*/
+        .flexivel{
+            display: flex;
+        }
+        /* align-content -> eixo horizontal as mesmas propriedade do align-items, a diferença é que não aplica o espaço entre os elementoa.
+         valor stretch estica valor padrão,
+         flex start -> se posiciona no top do container,
+         start end -> se posiciona no bottom do container,
+         space-around -> mesmo comportamento do align-items
+         center -> no center*/
+        .align{
+            align-content:center;
+            justify-content:space-evenly;
+            flex-wrap: wrap;
+        }
+        body{
+            font-family: arial;
+            color:#000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flexivel align">
+       <div class="item">CFB CURSOS 1</div>
+       <div class="item">CFB CURSOS 2</div>
+       <div class="item">CFB CURSOS 3</div>
+       <div class="item">CFB CURSOS 1</div>
+       <div class="item">CFB CURSOS 2</div>
+       <div class="item">CFB CURSOS 3</div>
+       <div class="item">CFB CURSOS 1</div>
+       <div class="item">CFB CURSOS 2</div>
+       <div class="item">CFB CURSOS 3</div>
+    </div>
+</body>
+</html>
