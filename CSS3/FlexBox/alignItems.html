@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>justify content</title>
+    <title>align items</title>
     <style>
         .item{
             margin: 5px;
@@ -13,27 +13,26 @@
             text-align:center;
             font-size:1em;
             color:#fff;
+             /* fazendo calculo, 20 e de margin e padding*/
+             width: calc(33.3333% - 20px);
         }
         .container{
             max-width: 600px;
             margin: 0 auto;
             border: 1px solid #000;
+            height: 400px;
+           
+
         }
         /* Criando uma classe para aplicar nos conteiners que eu quero que seja flexivel*/
         .flexivel{
             display: flex;
         }
-        /*justify-content -> alinhamento dos items destribui da esqueda pra direita na horizontal. 
-        valores flex-start, flex-end, 
-        space-between colar no começo e fim divido o espaço restante entre os items,
-        space-around da um espaço no final e começo e dobra esse espaço entre os item,
-        space-evenly o espaço e igual entre todos os elementos */
-        .justify{
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-
-
+        /* align-items -> eixo horizontal. valor stretch estica valor padrão, flex start  -> se posiciona no top do container
+        start end -> se posiciona no bottom do container, center -> no center*/
+        .align{
+            align-items:center;
+            justify-content:space-evenly;
         }
         body{
             font-family: arial;
@@ -42,7 +41,7 @@
     </style>
 </head>
 <body>
-    <div class="container flexivel justify">
+    <div class="container flexivel align">
        <div class="item">CFB CURSOS 1</div>
        <div class="item">CFB CURSOS 2</div>
        <div class="item">CFB CURSOS 3</div>
