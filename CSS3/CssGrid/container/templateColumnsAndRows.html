@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body{
+            font-family: arial;
+            color: #000;
+        }
+        .item{
+            background-color: #048;
+            color: #fff;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        .container{
+            /*grid ele ficar como uma grade e não acontece nada se eu não colocar as propriedades
+            mas se eu colocar o inline-grid ele ocupa so a area do conteudo dentro dele*/
+            display: grid;
+            /*depois que especificar que meu item será uma grade eu tenho que especificar as linha e colunas
+             definindo quandtas colunasn terá minha grade, auto e auto terá 2 colunas se eu colocar mais uma
+             auto tera 3 colunas e assim ..., posso também definir por px grid-template-columns:50px 250px auto; */
+            grid-template-columns: auto auto;
+            /*define a altura da linhas, auto é o valor padrão, 150px foi o valor da altura da primeira linha, 
+            50px segunda linha */
+            grid-template-rows:150px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">CFB Cursos 1</div>
+        <div class="item">CFB Cursos 2</div>
+        <div class="item">CFB Cursos 3</div>
+        <div class="item">CFB Cursos 4</div>
+        <div class="item">CFB Cursos 5</div>
+        <div class="item">CFB Cursos 6</div>
+        <div class="item">CFB Cursos 7</div>
+        <div class="item">CFB Cursos 8</div>
+        <div class="item">CFB Cursos 9</div>
+    </div>
+
+</body>
+</html>
