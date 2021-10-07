@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        .item{
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align:center;
+            font-size:1em;
+            color:#fff;
+        }
+        .container{
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            height: 400px;
+            align-items: center;
+        }
+        .flexivel{
+            display: flex;
+        }
+        .horizontal{
+            flex-direction: row;
+        }
+        body{
+            font-family: arial;
+            color:#000;
+        }
+        /* alinha uma elemento dentro de um continer em um grupo posso alinha 1*/
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .center{
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flexivel horizontal">
+       <div class="item start">CFB CURSOS 1</div>
+       <div class="item end">CFB CURSOS 2</div>
+       <div class="item center">CFB CURSOS 3</div>
+       <div class="item">CFB CURSOS 4</div>
+       <div class="item">CFB CURSOS 5</div>
+       <div class="item">CFB CURSOS 6</div>
+    </div>
+</body>
+</html>
