@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow</title>
+    <style>
+        .item{
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align:center;
+            font-size:1em;
+            color:#fff;
+    
+        }
+        .container{
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            height: 400px;
+           
+
+        }
+        /* Criando uma classe para aplicar nos conteiners que eu quero que seja flexivel*/
+        .flexivel{
+            display: flex;
+        }
+        /* align-content -> eixo horizontal as mesmas propriedade do align-items, a diferença é que não aplica o espaço entre os elementoa.
+         valor stretch estica valor padrão,
+         flex start -> se posiciona no top do container,
+         start end -> se posiciona no bottom do container,
+         space-around -> mesmo comportamento do align-items
+         center -> no center*/
+        .align{
+            align-content:center;
+            justify-content:space-evenly;
+            flex-wrap: wrap;
+        }
+        body{
+            font-family: arial;
+            color:#000;
+        }
+        /* Por padrão os flex têm flex grow 0 não se a justam ao container, flex grow 1 ele se ajusta ao conatiner ocupando o espaço livre, 
+        se eu coloco flex 2 os elemento que receber ocupará um espaço maior que os demais, quanto maior o numero do flex-grow maior será o elemento
+        se estiver flex grow o justify não funciona*/
+        .tam0{
+            flex-grow:0;
+        }
+       
+        .tam1{
+            flex-grow:1;
+        }
+        .tam2{
+            flex-grow:2;
+        }
+        .tam3{
+            flex-grow:3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container flexivel align">
+       <div class="item tam1">CFB CURSOS 1</div>
+       <div class="item tam2">CFB CURSOS 2</div>
+       <div class="item tam3">CFB CURSOS 3</div>
+    </div>
+</body>
+</html>
