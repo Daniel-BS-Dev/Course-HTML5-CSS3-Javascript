@@ -1,0 +1,30 @@
+@keyframes dashAnime {
+    from{
+        stroke-dasharray: 1000; /* todas as linha ficam tracejadas*/
+        stroke-dashoffset: 1000; 
+        fill:transparent;
+    }
+    to{
+        stroke-dasharray: 1000; /* todas as linha ficam tracejadas*/
+        stroke-dashoffset: 0; 
+        fill:rgb(109, 41, 41);
+    }
+}
+
+
+
+.st0{
+    fill:transparent;
+    stroke:rgb(89, 42, 177);
+    stroke-width:4;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1000; /* todas as linha ficam tracejadas*/
+    stroke-dashoffset: 1000; /* quanto o dash vai se deslocar*/
+    animation: dashAnime 3s linear infinite;
+}
+
+.div{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
