@@ -1,0 +1,51 @@
+@keyframes myBox {
+    0%{
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        border-radius: 0px;
+    }
+    50%{
+        background-color: purple;
+        width: 400px;
+        height: 100px;
+        transform: translate(400px, 400px) rotate(0deg);
+        border-radius: 0px;
+    } 
+    80%{
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        transform: translate(0px, 0px) rotate(0deg);
+        border-radius: 50%;
+    }
+    100%{
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        transform: translate(800px, 800px) rotate(360deg);
+    }
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    width: 80%;
+    height: 800px;
+    display: table;
+    background: #c3c5c6;
+    margin: 100px auto;
+
+}
+
+.square{
+    background: blue;
+    width: 100px;
+    height: 100px;
+    transition: all 3s ease-in;/* o ideal é que o tempo seja igual*/
+    animation: myBox 3s infinite;
+}
